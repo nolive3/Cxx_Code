@@ -1,0 +1,16 @@
+Q1. printEmployee1 is a pass by value function, so the object is copied to the variable 'emp' 
+for the duration of the function call. At the end of the function call the variable 'emp' 
+goes out of scope causing it to be destroyed.
+
+Q2. printEmployee2 is a pass by referance function which means that the 'emp' variable is the 
+same one as 'e2' so no copy is made, and the destructor is not called, since 'e2' is in scope.
+
+Q3. The thing being destroyed in this is the variable 'tmp' declared as part of copy swap, the 
+values are the values of the original assignee which have been swapped with the copy of the 
+assigner.
+
+Q4. The three things getting destroyed are 'e1', 'e2', and 'e3'. They are being destroyed by 
+leaving scope, this is caused by main returning.
+
+Q5. Bob got destroyed during Q3 when you assigned Chris to his variable, 'e1', the variable 
+still exists but it now contains information from 'e3' which is Chris.
