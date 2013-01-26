@@ -1,0 +1,113 @@
+Spring 2013  Homework 1
+High Order Calculator -- Part 1
+
+This homework will let you write a few C++ classes and begin to build a framework
+that we will build on in later homeworks.  By the end, we will have a calculator
+that can do advanced functions, parse expressions with variables, and we will even
+support our own data type complete with custom operators.
+
+Our first step is to be able type in basic expressions on standard in, break them 
+into tokens and process the +, -, * and / operations.  For our first step we will only
+support integers, and operations.  We will support more complex operations, parens, and variables in later
+homeworks.  Each line of input is a single expression.
+
+Specific requirements:
+
+1.  Create a class called Token.  A token represents one lexical item from the input.  A token 
+has two primary attributes:  value and type.  A token type includes:  ADDOP (a + or -), MULTOP 
+(a * or /), NUMBER (any integer value), EOL (end of line marker). 
+
+The value is the actual substring/character or the integer value.  For example given the 
+expression 58 * 66 + 43 would produce the following 5 tokens:  
+(NUMBER, 58) (MULTOP, *) (NUMBER, 66) (ADDOP, +) (NUMBER, 43).
+
+Note that spaces are ignored, so 58*66+43 is the same as 58   *     66      +     43
+
+Also note that for this homework, the expression is considered to be all on one line.
+
+2.  Create a class called Scanner.  The scanner should have a method:
+Token getNextToken()  that provides the next token to be considered by the calculator.
+ Scanner should get needed input from cin, then break the raw input string into pieces and 
+ create the Tokens.  getNextToken returns the next appropriate token, and it is up to the scanner
+ to figure out whether it needs more input from cin or not.  The EOL token is returned to mark the end 
+of the line.
+ 
+ For part 1, we will consider that each input line is a complete expression.
+ 
+ If a line contains only the letter q, then the scanner should allow the program to exit and return the END token.
+  
+ 3.  Create a class called Calculator.  The calculator should start up, print a welcome message
+ and then perform the actual processing of the input.  The basic grammar for part 1 is:
+ NUMBER : integer
+ FACTOR : NUMBER 
+ TERM : TERM MULTOP FACTOR | FACTOR
+ EXPRESSION : EXPRESSION ADDOP TERM | TERM | END
+ 
+ There are several ways you can handle this parsing.  One is to not use the grammar above at all,
+ but to use a basic shunting algorithm.  You use two stacks and the algorithm will handle precedence
+ correctly.  There is a detailed instructions for this on wikipedia if you are interested.
+ 
+ Another way is to use a compiler tool like lex/yacc.  This is way outside the scope of this class,
+ but a possibility if you have had a programming languages class.
+ 
+ Finally, we can use a recursive descent parser.  This sounds scary, but basically for each element of our
+ grammar, we make a function.  We start at the top and call down to other functions to start the parse.
+ 
+ For example, we would have an expression() method that called term() that called factor().  Assigning an integer
+ to a number would be done by the scanner.
+ 
+ To parse our previous sample 55 * 66 + 43, our calculator would try to build an expression by getting a term.
+ The term would look for a factor.  Since factor needs a token, it would call getNextToken().  
+ 
+ The scanner would  realize it had no tokens, and would read a line of input from cin.  It parses that line 
+ and puts the tokens into  a vector.  It then removes the first token (NUMBER, 55) from the vector and returns it.
+
+ The calculator then goes back to term.  Term now needs to look at the next token so it gets another token from
+the scanner (MULTOP, *).  Since MULTOP is a valid token building up a term, we then go to get another factor.  Factor
+returns the (NUMBER, 66) token and term applies the operation giving an intermediate result of (3630).  We then
+send term result back up to expression.  We look at the next token and get (ADDOP, +).  Since this is a valid
+next token for expression, we go back to term again.  The parse would continue until we get to EOL.
+
+4.  Sample interaction:
+Welcome to the High Order Calculator (q to quit)
+5 + 4 * 10
+Result: 45
+6 * 10 + 8
+Result: 68
+
+5.  Helpful Hints:
+isdigit(ch)  returns true if the character is a digit.
+getline(cin, str) gets an input string from cin and puts it into str
+string class has operator[] overloaded, so you can look at individual characters with str[i]
+
+Conversions.
+The easiest way to convert a string to an integer is using a stringstream
+The class is defined in the header <sstream>.  Here is a snippet:
+
+#include <sstream>
+
+std::stringstream ss;
+ss<<"654";
+int x;
+ss>>x;
+
+6.  Grading criteria:
+
+Token Class holds required information ..... 10
+
+Scanner Class 
+  reads input line................10
+  parses line into tokens ........15
+  getNextToken method correct ....15
+  
+Calculator
+  prints welcome header ..........05
+  parses an expression ...........10
+  prints result ..................10
+  precedence enforced ............20
+  
+q causes end of calculator run.......05
+  
+
+
+

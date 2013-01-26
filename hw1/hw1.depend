@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1358984888 source:c:\users\nick\documents\github\cxx_code\hw1\scanner.cpp
+	"scanner.h"
+
+1358985341 c:\users\nick\documents\github\cxx_code\hw1\scanner.h
+	<iostream>
+	"token.h"
+
+1358986313 c:\users\nick\documents\github\cxx_code\hw1\token.h
+	<string>
+
+1358986008 source:c:\users\nick\documents\github\cxx_code\hw1\token.cpp
+	"token.h"
+
