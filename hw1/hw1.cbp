@@ -31,6 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="calculator.cpp" />
+		<Unit filename="calculator.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="scanner.cpp" />
 		<Unit filename="scanner.h" />
