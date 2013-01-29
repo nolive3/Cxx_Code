@@ -28,7 +28,7 @@ Token Scanner::getNewToken()
         source.clear();
         std::string s;
         source>>s;
-        return Token("INVALID", s);
+        return Token(s);
     }
     if(isdigit(ch)){
         std::stringstream ss;
@@ -37,7 +37,7 @@ Token Scanner::getNewToken()
         std::string s;
         ss<<i;
         ss>>s;
-        Token T("NUMBER", s);
+        Token T(Token::NUMBER, s);
         return T;
     }else{
         while(true){
@@ -49,26 +49,26 @@ Token Scanner::getNewToken()
             switch(c){
             case '+':
             case '-':
-                return Token("ADDOP", res);
+                return Token(Token::ADDOP, res);
             case '*':
             case '/':
-                return Token("MULTOP", res);
+                return Token(Token::MULTOP, res);
             case '\n':
             case '\r':
-                return Token("EOL", res);
+                return Token(Token::EOL, res);
             case 'q':
-                return Token("END", res);
+                return Token(Token::END, res);
             case ' ':
             case '\t':
                 break;
 
 
             default:
-                return Token("INVALID", res);
+                return Token(res);
             }
         }
     }
-    return Token("INVALID");
+    return Token();
 }
 
 Token Scanner::getNextToken()

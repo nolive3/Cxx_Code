@@ -1,16 +1,21 @@
 #include "token.h"
 
-Token::Token(std::string new_type) : token_type(new_type), token_value()
+Token::Token(token_t new_type) : Token(new_type, "nothing")
 {
     //ctor
 }
 
-Token::Token(std::string new_type, std::string new_val) : token_type(new_type), token_value(new_val)
+Token::Token(std::string new_val) : Token(INVALID, new_val)
 {
     //ctor
 }
 
-Token::Token() : Token("INVALID")
+Token::Token(token_t new_type, std::string new_val) : token_type(new_type), token_value(new_val)
+{
+    //ctor
+}
+
+Token::Token() : Token(INVALID)
 {
     //ctor
 }
@@ -27,7 +32,7 @@ Token::Token(const Token& other) : token_type(other.token_type), token_value(oth
 
 bool Token::valid()
 {
-    return token_type != "INVALID";
+    return token_type != Token::INVALID;
 }
 
 Token& Token::operator=(const Token& rhs)
@@ -51,5 +56,38 @@ void Token::swap(Token& a, Token& b){
 
 std::ostream& operator<<(std::ostream& output, const Token& t) {
     output <<  t.token_type << "(" << t.token_value <<")";
+    return output;
+}
+
+std::ostream& operator<<(std::ostream& output, const Token::token_t& t) {
+    switch(t){
+    case Token::END:
+        output<<"END";
+        break;
+    case Token::EOL:
+        output<<"EOL";
+        break;
+    case Token::ADDOP:
+        output<<"ADDOP";
+        break;
+    case Token::MULTOP:
+        output<<"MULTOP";
+        break;
+    case Token::NUMBER:
+        output<<"NUMBER";
+        break;
+    case Token::TERM:
+        output<<"TERM";
+        break;
+    case Token::EXPR:
+        output<<"EXPR";
+        break;
+    case Token::INVALID:
+        output<<"INVALID";
+        break;
+    default:
+        output<<"BAD_TYPE";
+        break;
+    }
     return output;
 }
