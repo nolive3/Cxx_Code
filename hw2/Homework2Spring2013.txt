@@ -1,0 +1,70 @@
+Homework #2 Spring 2013
+
+For this homework, we will develop a supporting class to be used later by our calculator.
+
+Part 1:
+
+Create a class Fraction.  
+A fraction has a numerator and denominator.  You should have constructors that create a new 
+fraction given both values, or a default constructor which creates the fraction 1/1.
+
+You may create the copy constructor and assignment operator yourself, or allow the compiler to 
+do it.
+
+You should overload the following operators:
+
++ add two fractions, add a fraction and an int
+- subtract two fractions, subtract a fraction from an int
+* multiply two fractions, multiply a fraction and an int
+/ divide two fractions, divide a fraction by an int
+++ (both post and pre) increment a fraction by 1
+-- (both post and pre) decrement a fraction by 1
+<< print a fraction in the following format F(numerator / denominator)  for example F(2/3)
+== return true if fractions are equal
+!= return true if fractions not equal
+<  return true if left fraction less than right fracion.
+double()  return the fraction as a double (actually carry out floating point division)
+int()     return the fraction as an int after carrying out integer division
+
+
+Fractions should always be stored in their most reduced form.  Thus if  you construct a fraction
+(4/6) it should be stored as numerator = 2 denominator = 3.  To reduce a fraction, the GCD and the 
+LCM will be useful.
+
+GCD (A, 0) = A
+GCD (A, B) = GCD (B, A % B)
+
+LCM = abs(A * B) / GCD (A, B)
+
+For example, what is the GCD of 4 and 6?
+GCD(4,6) = GCD ( 6, 4 % 6) = GCD (6 , 4) = GCD (4, 6 % 4) = GCD (4, 2) = GCD (2, 2 % 4) = GCD (2, 2) = GCD ( 2, 0) = 2
+
+Then we use the GCD to reduce 4/6 to 2/3
+
+You should reduce the fraction after every operation and during construction.  Note that copy and
+assignment should not have to do anything since the fraction should already be reduced.
+
+2.  Modify your calculator to accept either a number or a fraction.  A fraction is entered as F(num/den).  
+If your scanner sees a token starting with capitol F, you can assume a fraction is being entered.
+Use your overloaded operators to resolve the fractions and your conversion function to get the value for the expression.
+
+As before, we will not yet hit you with bad expressions.  Thus, fractions will always be formatted correctly
+and they will be used correctly in an expression.
+
+We will not do things like F(4/) or 1 + F(4/3).
+
+You may print the results of expressions now as doubles.
+
+GRADING CRITERIA:
+Fraction class:
+   Constructors .................... 05
+   Operators 5 points each (x12) ... 60
+   Reductions take place correctly . 10
+Calculator Modifications
+   Scanner parses the fraction ..... 05
+   Fraction can be used in exp ..... 20
+   
+
+
+
+
