@@ -13,18 +13,18 @@ do it.
 
 You should overload the following operators:
 
-x+ add two fractions, add a fraction and an int
-x- subtract two fractions, subtract a fraction from an int
-x* multiply two fractions, multiply a fraction and an int
-x/ divide two fractions, divide a fraction by an int
-x++ (both post and pre) increment a fraction by 1
-x-- (both post and pre) decrement a fraction by 1
-x<< print a fraction in the following format F(numerator / denominator)  for example F(2/3)
-== return true if fractions are equal
-!= return true if fractions not equal
-<  return true if left fraction less than right fracion.
-double()  return the fraction as a double (actually carry out floating point division)
-int()     return the fraction as an int after carrying out integer division
+x + add two fractions, add a fraction and an int
+x - subtract two fractions, subtract a fraction from an int
+x * multiply two fractions, multiply a fraction and an int
+x / divide two fractions, divide a fraction by an int
+x ++ (both post and pre) increment a fraction by 1
+x -- (both post and pre) decrement a fraction by 1
+x << print a fraction in the following format F(numerator / denominator)  for example F(2/3)
+x == return true if fractions are equal
+x != return true if fractions not equal
+x <  return true if left fraction less than right fracion.
+x double()  return the fraction as a double (actually carry out floating point division)
+x int()     return the fraction as an int after carrying out integer division
 
 
 Fractions should always be stored in their most reduced form.  Thus if  you construct a fraction
