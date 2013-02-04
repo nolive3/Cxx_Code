@@ -1,12 +1,13 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 #include <string>
+#include "fraction.h"
 #include <iostream>
 
 class Token
 {
     public:
-        enum token_t {END, EOL, ADDOP, MULTOP, NUMBER, TERM, EXPR, INVALID};
+        enum token_t {END, EOL, ADDOP, MULTOP, FRACTION, NUMBER, TERM, EXPR, INVALID};
         friend std::ostream& operator<<(std::ostream& output, const Token& t);
         friend std::ostream& operator<<(std::ostream& output, const Token::token_t& t);
         Token(token_t new_type);

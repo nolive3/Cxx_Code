@@ -1,4 +1,5 @@
 #include "scanner.h"
+#include "fraction.h"
 #include <sstream>
 
 Scanner::Scanner(std::istream& input) : source(input), ungot()
@@ -47,6 +48,10 @@ Token Scanner::getNewToken()
             ss<<c;
             ss>>res;
             switch(c){
+            case 'F':
+                int num, den;
+                source>>"(">>num>>"/">>den>>")";
+                return Token(Token::FRACTION, Fraction(num, den));
             case '+':
             case '-':
                 return Token(Token::ADDOP, res);

@@ -76,6 +76,9 @@ std::ostream& operator<<(std::ostream& output, const Token::token_t& t) {
     case Token::NUMBER:
         output<<"NUMBER";
         break;
+    case Token::FRACTION:
+        output<<"FRACTION";
+        break;
     case Token::TERM:
         output<<"TERM";
         break;
