@@ -79,22 +79,64 @@ Token& Token::operator=(const Fraction& val)
 }
 
 
-Token::Token(token_t new_type, char new_val) : token_type(new_type), token_value{new_val}
-{
-    //ctor
-}
+
 void Token::swap(Token& a, Token& b){
     std::swap(a.token_type, b.token_type);
     std::swap(a.token_value, b.token_value);
 }
 
 std::ostream& operator<<(std::ostream& output, const Token& t) {
-    output <<  t.token_type << "(" << t.token_value <<")";
+    output <<  t.token_type << "(";
+    switch(t.token_type){
+    case Token::INVALID:
+        output<<"INVALID";
+        break;
+    case Token::END:
+        output<<"END";
+        break;
+    case Token::EOL:
+        output<<"EOL";
+        break;
+    case Token::ADDOP:
+        output<<t.token_value.s;
+        break;
+    case Token::MULTOP:
+        output<<t.token_value.s;
+        break;
+    case Token::NUMBER:
+        output<<t.token_value.f;
+        break;
+    case Token::FACTOR:
+        output<<t.token_value.f;
+        break;
+    case Token::TERM:
+        output<<t.token_value.f;
+        break;
+    case Token::EXPR:
+        output<<t.token_value.f;
+        break;
+    case Token::LPAR:
+        output<<t.token_value.s;
+        break;
+    case Token::RPAR:
+        output<<t.token_value.s;
+        break;
+    case Token::CHAR:
+        output<<t.token_value.s;
+        break;
+    default:
+        output<<"BAD_TYPE";
+        break;
+    }
+    output <<")";
     return output;
 }
 
 std::ostream& operator<<(std::ostream& output, const Token::token_t& t) {
     switch(t){
+    case Token::INVALID:
+        output<<"INVALID";
+        break;
     case Token::END:
         output<<"END";
         break;
@@ -110,14 +152,8 @@ std::ostream& operator<<(std::ostream& output, const Token::token_t& t) {
     case Token::NUMBER:
         output<<"NUMBER";
         break;
-    case Token::FRACTION:
-        output<<"FRACTION";
-        break;
-    case Token::TERM_FRACTION:
-        output<<"TERM_FRACTION";
-        break;
-    case Token::EXPR_FRACTION:
-        output<<"EXPR_FRACTION";
+    case Token::FACTOR:
+        output<<"FACTOR";
         break;
     case Token::TERM:
         output<<"TERM";

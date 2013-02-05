@@ -50,6 +50,8 @@ class Fraction
 
         operator int() const {return m_num/m_den;}
 
+        bool is_integer() const {return m_den==1;}
+
 
         Fraction();
         Fraction(const int& num);

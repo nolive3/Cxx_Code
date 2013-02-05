@@ -2,7 +2,7 @@
 1360014032 source:c:\users\nick\documents\github\cxx_code\hw2\fraction.cpp
 	"fraction.h"
 
-1360014032 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
+1360098214 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
 	<iostream>
 
 1360014032 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
@@ -23,13 +23,16 @@
 	<stack>
 	"token.h"
 
-1360019461 c:\users\nick\documents\github\cxx_code\hw2\token.h
+1360099595 c:\users\nick\documents\github\cxx_code\hw2\token.h
 	<string>
 	"fraction.h"
 	<iostream>
 
-1360017574 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
+1360099476 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
 	"scanner.h"
 	"fraction.h"
 	<sstream>
+
+1360099663 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
+	"token.h"
 

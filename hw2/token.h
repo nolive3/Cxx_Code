@@ -8,7 +8,7 @@ class Token
 {
     public:
         union val_t {Fraction f; char s;};
-        enum token_t {END, EOL, ADDOP, MULTOP, CHAR, FRACTION, NUMBER, TERM_FRACTION, EXPR_FRACTION, TERM, EXPR, LPAR, RPAR, INVALID};
+        enum token_t {END, EOL, ADDOP, MULTOP, CHAR, NUMBER, TERM, FACTOR, EXPR, LPAR, RPAR, INVALID};
         friend std::ostream& operator<<(std::ostream& output, const Token& t);
         friend std::ostream& operator<<(std::ostream& output, const Token::token_t& t);
         Token(token_t new_type);

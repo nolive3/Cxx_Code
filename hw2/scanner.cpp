@@ -40,22 +40,27 @@ Token Scanner::getNewToken()
             source>>s;
             return Token(EOF);
         }
-        case 'F':
-            source.get();
-            return Token(Token::CHAR, 'F');
         case '+':
         case '-':
             source.get();
             return Token(Token::ADDOP, ch);
         case '*':
         case '/':
+            source.get();
+            return Token(Token::MULTOP, ch);
         case '\n':
         case '\r':
+            source.get();
+            return Token(Token::EOL, ch);
         case 'q':
+            source.get();
+            return Token(Token::END, ch);
         case ' ':
         case '\t':
+            source.get();
+            continue;
         default:
-            return Token();
+            return Token(Token::CHAR, source.get());
         }
     }
     return Token();
