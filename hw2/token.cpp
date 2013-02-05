@@ -1,16 +1,35 @@
 #include "token.h"
 
-Token::Token(token_t new_type) : Token(new_type, "nothing")
+Token::Token(token_t new_type) : Token(new_type, '\0')
 {
     //ctor
 }
 
-Token::Token(std::string new_val) : Token(INVALID, new_val)
+Token::Token(char new_val) : Token(INVALID, new_val)
 {
     //ctor
 }
 
-Token::Token(token_t new_type, std::string new_val) : token_type(new_type), token_value(new_val)
+Token::Token(Fraction new_val) : Token(INVALID, new_val)
+{
+    //ctor
+}
+
+Token::Token(int new_val) : Token(INVALID, new_val)
+{
+    //ctor
+}
+
+Token::Token(token_t new_type, char new_val) : token_type(new_type), token_value{new_val}
+{
+}
+
+Token::Token(token_t new_type, Fraction new_val) : token_type(new_type), token_value{new_val}
+{
+    //ctor
+}
+
+Token::Token(token_t new_type, int new_val) : token_type(new_type), token_value{Fraction(new_val)}
 {
     //ctor
 }
@@ -43,12 +62,27 @@ Token& Token::operator=(const Token& rhs)
     return *this;
 }
 
-Token& Token::operator=(const std::string& val)
+Token& Token::operator=(const char& val)
 {
-    token_value = val;
+    token_value.s = val;
+    return *this;
+}
+Token& Token::operator=(const int& val)
+{
+    token_value.f = val;
+    return *this;
+}
+Token& Token::operator=(const Fraction& val)
+{
+    token_value.f = val;
     return *this;
 }
 
+
+Token::Token(token_t new_type, char new_val) : token_type(new_type), token_value{new_val}
+{
+    //ctor
+}
 void Token::swap(Token& a, Token& b){
     std::swap(a.token_type, b.token_type);
     std::swap(a.token_value, b.token_value);
@@ -79,14 +113,26 @@ std::ostream& operator<<(std::ostream& output, const Token::token_t& t) {
     case Token::FRACTION:
         output<<"FRACTION";
         break;
+    case Token::TERM_FRACTION:
+        output<<"TERM_FRACTION";
+        break;
+    case Token::EXPR_FRACTION:
+        output<<"EXPR_FRACTION";
+        break;
     case Token::TERM:
         output<<"TERM";
         break;
     case Token::EXPR:
         output<<"EXPR";
         break;
-    case Token::INVALID:
-        output<<"INVALID";
+    case Token::LPAR:
+        output<<"LPAR";
+        break;
+    case Token::RPAR:
+        output<<"RPAR";
+        break;
+    case Token::CHAR:
+        output<<"CHAR";
         break;
     default:
         output<<"BAD_TYPE";

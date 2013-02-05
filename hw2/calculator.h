@@ -15,11 +15,14 @@ class Calculator
         bool run(std::ostream& output);   //read one expression from the stream, print result to output, return if the expression was exit
     protected:
     private:
-        Token expr();
-        Token term();
-        Token factor();
-        Token mulop();
-        Token addop();
+        Token line(); // Fraction
+        Token expr(); // Fraction
+        Token term(); // Fraction
+        Token factor(); // Fraction
+        Token mulop(); // char
+        Token addop(); // char
+        Token number(); // Fraction
+        Token fraction(); // Fraction
         Scanner& scan_stream;
 };
 

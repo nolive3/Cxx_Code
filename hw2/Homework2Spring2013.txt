@@ -65,6 +65,11 @@ Calculator Modifications
    Fraction can be used in exp ..... 20
 
 
-
-
-
+LINE => EXP EOL | END
+EXP => EXP ADDOP TERM | TERM
+TERM => TERM MULOP FACTOR | FACTOR
+FACTOR => NUMBER | (EXP)
+MULOP => * | /
+ADDOP => + | -
+NUMBER => int | FRACTION
+FRACTION => F(NUMBER/NUMBER)
