@@ -2,6 +2,17 @@
 #include "scanner.h"
 #include <iostream>
 
+/*My grammar for this iteration
+LINE => EXP EOL | END
+EXPR => TERM {ADDOP TERM}*
+TERM => FACTOR {MULOP FACTOR}*
+FACTOR => NUMBER | (EXPR)
+MULOP => * | /
+ADDOP => + | -
+NUMBER => int | FRACTION
+FRACTION => F(FACTOR/FACTOR)
+*/
+
 int main(void){
     Scanner scan{std::cin};
     Calculator calc{scan};
