@@ -36,8 +36,6 @@ Token Scanner::getNewToken()
         case EOF:
         {
             source.clear();
-            std::string s;
-            source>>s;
             return Token(EOF);
         }
         case '+':
@@ -74,11 +72,14 @@ Token Scanner::getNewToken()
 
 Token Scanner::getNextToken()
 {
-    if(ungot.size()>0){
-        Token t = ungot.top();
-        ungot.pop();
-        return t;
-    }
-    Token t = getNewToken();
+    Token t;
+    do{
+        if(ungot.size()>0){
+            t = ungot.top();
+            ungot.pop();
+        }else{
+            t = getNewToken();
+        }
+    }while(!t.valid());
     return t;
 }
