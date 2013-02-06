@@ -52,6 +52,12 @@ Token Scanner::getNewToken()
         case '\r':
             source.get();
             return Token(Token::EOL, ch);
+        case '(':
+            source.get();
+            return Token(Token::LPAR, ch);
+        case ')':
+            source.get();
+            return Token(Token::RPAR, ch);
         case 'q':
             source.get();
             return Token(Token::END, ch);

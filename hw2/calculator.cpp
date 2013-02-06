@@ -137,13 +137,21 @@ Token Calculator::factor()
     Token res(Token::FACTOR);
     Token num = number();
     if(num.valid()){
-        res = num.value().f;
-        return res;
+        return res = num.value().f;
     }
     Token par = scan_stream.getNextToken();
     if(par.type()==Token::LPAR){
-
+        Token exp = expr();
+        if(exp.valid()){
+            Token par2 = scan_stream.getNextToken();
+            if(par2.type()==Token::RPAR){
+                return res = exp.value().f;
+            }
+            scan_stream.unget(par2);
+            scan_stream.unget(exp);
+        }
     }
+    scan_stream.unget(par);
     return Token();
 }
 Token Calculator::addop()
