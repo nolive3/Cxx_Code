@@ -156,17 +156,61 @@ Token Calculator::factor()
 }
 Token Calculator::addop()
 {
+    Token a = scan_stream.getNextToken();
+    if(a.type() == Token::ADDOP){
+        return a;
+    }
+    scan_stream.unget(a);
     return Token();
 }
 Token Calculator::mulop()
 {
+    Token m = scan_stream.getNextToken();
+    if(m.type() == Token::MULTOP){
+        return m;
+    }
+    scan_stream.unget(m);
     return Token();
 }
 Token Calculator::number()
 {
+    Token n = scan_stream.getNextToken();
+    if(n.type() == Token::NUMBER){
+        return n;
+    }
+    scan_stream.unget(n);
+    n = fraction();
+    if(n.valid()){
+        return n;
+    }
     return Token();
 }
 Token Calculator::fraction()
 {
+    Token f = scan_stream.getNextToken();
+    if(f.type() == Token::CHAR && f.value().s == 'F'){
+        Token par = scan_stream.getNextToken();
+        if(par.type() == Token::LPAR){
+            Token n1 = factor();
+            if(n1.valid()){
+                Token div = scan_stream.getNextToken();
+                if(div.type() == Token::MULTOP && div.value().s == '/'){
+                    Token n2 = factor();
+                    if(n2.valid()){
+                        Token par2 = scan_stream.getNextToken();
+                        if(par2.type() == Token::RPAR){
+                            return Token(Token::NUMBER, n1.value().f/n2.value().f);
+                        }
+                        scan_stream.unget(par2);
+                        scan_stream.unget(n2);
+                    }
+                }
+                scan_stream.unget(div);
+                scan_stream.unget(n1);
+            }
+        }
+        scan_stream.unget(par);
+    }
+    scan_stream.unget(f);
     return Token();
 }
