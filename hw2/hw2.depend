@@ -1,38 +1,38 @@
 # depslib dependency file v1.0
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\fraction.cpp
+1360014032 source:c:\users\nick\documents\github\cxx_code\hw2\fraction.cpp
 	"fraction.h"
 
-1360627547 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
+1360098214 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
 	<iostream>
 
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
+1360113198 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
 	"calculator.h"
 	"scanner.h"
 	<iostream>
 
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
+1360112616 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
 	"calculator.h"
 	<sstream>
 
-1360627547 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
+1360017303 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
 	"scanner.h"
 	<iostream>
 
-1360627547 c:\users\nick\documents\github\cxx_code\hw2\scanner.h
+1360014032 c:\users\nick\documents\github\cxx_code\hw2\scanner.h
 	<iostream>
 	<stack>
 	"token.h"
 
-1360627547 c:\users\nick\documents\github\cxx_code\hw2\token.h
+1360099595 c:\users\nick\documents\github\cxx_code\hw2\token.h
 	<string>
 	"fraction.h"
 	<iostream>
 
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
+1360109909 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
 	"scanner.h"
 	"fraction.h"
 	<sstream>
 
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
+1360099663 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
 	"token.h"
 
