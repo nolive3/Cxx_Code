@@ -1,0 +1,12 @@
+Q1) cin takes the 45 as the int then stops at the . (since ints cant have '.') then read the remaining digits as the double it took the first char as the char and took the rest of the line for the string.
+I had to type the entire line before anything happened, so the cin is clearly buffering the input and is smart enough to find the next thing of the right type.
+
+Q2) It set the int to 0 but left the rest of the things unchanged. x seems to have been set to 0 since that was the largets int the stream could find (nothing), but the stream was not happy about it, so it refused any additional opperations.
+
+Q3) clear() sets the streams status back to happy so it will attempt additional opperations, ignore() throws away the next (upto) N bytes of input or till the specified delimiter, whichever is first.
+
+Q4) since the exception thrown was a sub class of exception it loses the additional data stored when it is assigned to the exception object.
+
+Q5) catch an exception reference (add the char '&' to the type is pretty easy) which does not cause slicing.
+
+Q6) the delete foo never gets called since the exception is thrown before that, the local get deleted during the stack unwinding, but the pointer does not, use a unique_ptr<Foo> instead of just a Foo*
