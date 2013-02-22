@@ -1,6 +1,7 @@
 #include "calculator.h"
 #include "scanner.h"
 #include <iostream>
+#include <fstream>
 
 /*My grammar for this iteration
 LINE => EXP EOL | END
@@ -14,11 +15,13 @@ FRACTION => F(FACTOR/FACTOR)
 */
 
 int main(void){
-    Scanner scan{std::cin};
+    std::ifstream file;
+    file.open("program.txt");
+    Scanner scan{file};
     Calculator calc{scan};
-    std::cout<<"Welcome to the High Order Calculator (q to quit)"<<std::endl;
-    while(calc.run(std::cout)){
+    while(calc.run(std::cout, std::clog)){
 
     }
+    file.close();
     return 0;
 }

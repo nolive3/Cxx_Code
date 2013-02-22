@@ -11,28 +11,24 @@ Calculator::~Calculator()
     //dtor
 }
 
-bool Calculator::run(std::ostream& output)
+bool Calculator::run(std::ostream& output, std::ostream& err)
 {
-    output<<"Enter a formula: ";
 
     Token t = line();
-
     if(t.type() == Token::END){
         output<<"Good bye!"<<std::endl;
         return false;
     }
-
     if(t.type() == Token::EXPR){
         Fraction res = t.value().f;
 
         if(res.is_integer()){
-            output<<"The result is: "<<(int)res<<std::endl;
+            output<<(int)res<<std::endl;
         } else {
-            output<<"The result is: "<<res<<std::endl;
+            output<<res<<std::endl;
         }
         return true;
     }
-    output<<"bad input! D:"<<std::endl;
     Token clr;
     while((clr=scan_stream.getNextToken()).type()!=Token::EOL){
     }
@@ -45,7 +41,8 @@ Token Calculator::line()
     Token t = expr();
     if(t.valid()){
         Token next = scan_stream.getNextToken();
-        if(next.type() == Token::EOL){
+        if(next.type() == Token::EOL || (next.type() == Token::CHAR && next.value().s == '#')){
+            scan_stream.unget(next);
             return t;
         }
         scan_stream.unget(next);

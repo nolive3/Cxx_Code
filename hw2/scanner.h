@@ -14,8 +14,10 @@ class Scanner
         ~Scanner();
         Token getNextToken();
         void unget(Token);
+        long get_line();
     protected:
     private:
+        long line_no;
         Token getNewToken();
         std::istream& source;
         std::stack<Token> ungot;

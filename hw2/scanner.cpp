@@ -2,7 +2,7 @@
 #include "fraction.h"
 #include <sstream>
 
-Scanner::Scanner(std::istream& input) : source(input), ungot()
+Scanner::Scanner(std::istream& input) : line_no(1), source(input), ungot()
 {
     //ctor
 }
@@ -48,6 +48,7 @@ Token Scanner::getNewToken()
             return Token(Token::MULTOP, ch);
         case '\n':
         case '\r':
+            line_no++;
             source.get();
             return Token(Token::EOL, ch);
         case '(':

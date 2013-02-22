@@ -12,7 +12,7 @@ class Calculator
         Calculator operator=(const Calculator&) = delete;
         Calculator(Scanner& source);
         virtual ~Calculator();
-        bool run(std::ostream& output);   //read one expression from the stream, print result to output, return if the expression was exit
+        bool run(std::ostream& output, std::ostream& err);   //read one expression from the stream, print result to output, return if the expression was exit
     protected:
     private:
         Token line(); // Fraction
