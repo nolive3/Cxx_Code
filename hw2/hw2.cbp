@@ -31,6 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="calc_exception.cpp" />
+		<Unit filename="calc_exception.h" />
 		<Unit filename="calculator.cpp" />
 		<Unit filename="calculator.h" />
 		<Unit filename="fraction.cpp" />

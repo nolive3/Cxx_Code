@@ -20,16 +20,16 @@ Token::Token(int new_val) : Token(INVALID, new_val)
     //ctor
 }
 
-Token::Token(token_t new_type, char new_val) : token_type(new_type), token_value{new_val}
+Token::Token(token_t new_type, char new_val, int nlen) : m_len(nlen), token_type(new_type), token_value{new_val}
 {
 }
 
-Token::Token(token_t new_type, Fraction new_val) : token_type(new_type), token_value{new_val}
+Token::Token(token_t new_type, Fraction new_val, int nlen) : m_len(nlen), token_type(new_type), token_value{new_val}
 {
     //ctor
 }
 
-Token::Token(token_t new_type, int new_val) : token_type(new_type), token_value{Fraction(new_val)}
+Token::Token(token_t new_type, int new_val, int nlen) : m_len(nlen), token_type(new_type), token_value{Fraction(new_val)}
 {
     //ctor
 }
@@ -44,7 +44,7 @@ Token::~Token()
     //dtor
 }
 
-Token::Token(const Token& other) : token_type(other.token_type), token_value(other.token_value)
+Token::Token(const Token& other) : m_len(other.m_len), token_type(other.token_type), token_value(other.token_value)
 {
     //copy ctor
 }

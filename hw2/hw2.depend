@@ -5,35 +5,44 @@
 1360627547 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
 	<iostream>
 
-1361325384 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
+1361808413 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
 	"calculator.h"
 	"scanner.h"
 	<iostream>
 	<fstream>
 
-1361325301 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
+1361818640 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
 	"calculator.h"
+	"calc_exception.h"
 	<sstream>
 
 1361323176 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
 	"scanner.h"
 	<iostream>
 
-1361325270 c:\users\nick\documents\github\cxx_code\hw2\scanner.h
+1361817648 c:\users\nick\documents\github\cxx_code\hw2\scanner.h
 	<iostream>
 	<stack>
 	"token.h"
 
-1360627547 c:\users\nick\documents\github\cxx_code\hw2\token.h
+1361818540 c:\users\nick\documents\github\cxx_code\hw2\token.h
 	<string>
 	"fraction.h"
 	<iostream>
 
-1361325298 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
+1361818082 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
 	"scanner.h"
 	"fraction.h"
 	<sstream>
 
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
+1361817848 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
 	"token.h"
+
+1361816601 source:c:\users\nick\documents\github\cxx_code\hw2\calc_exception.cpp
+	"calc_exception.h"
+
+1361816556 c:\users\nick\documents\github\cxx_code\hw2\calc_exception.h
+	<stdexcept>
+	<string>
+	<iostream>
 

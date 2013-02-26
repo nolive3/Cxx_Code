@@ -14,10 +14,13 @@ class Scanner
         ~Scanner();
         Token getNextToken();
         void unget(Token);
-        long get_line();
+        long line() const { return line_no; }
+        long col() const { return col_no; }
     protected:
     private:
         long line_no;
+        long col_no;
+        long prev_len;
         Token getNewToken();
         std::istream& source;
         std::stack<Token> ungot;

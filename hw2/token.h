@@ -12,9 +12,9 @@ class Token
         friend std::ostream& operator<<(std::ostream& output, const Token& t);
         friend std::ostream& operator<<(std::ostream& output, const Token::token_t& t);
         Token(token_t new_type);
-        Token(token_t new_type, char new_val);
-        Token(token_t new_type, Fraction new_val);
-        Token(token_t new_type, int new_val);
+        Token(token_t new_type, char new_val, int = 1);
+        Token(token_t new_type, Fraction new_val, int = 1);
+        Token(token_t new_type, int new_val, int len = 1);
         Token(char new_val);
         Token(Fraction new_val);
         Token(int new_val);
@@ -28,9 +28,11 @@ class Token
         token_t type() { return token_type; }
         val_t& value() { return token_value; }
         bool valid();
+        int len() const { return m_len; }
+        void len(int dif) { m_len+=dif; }
     protected:
     private:
-
+        int m_len;
         token_t token_type;
         val_t token_value;
         void swap(Token&, Token&);

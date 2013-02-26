@@ -2,7 +2,7 @@
 #include "fraction.h"
 #include <sstream>
 
-Scanner::Scanner(std::istream& input) : line_no(1), source(input), ungot()
+Scanner::Scanner(std::istream& input) : line_no(1), col_no(1), prev_len(0), source(input), ungot()
 {
     //ctor
 }
@@ -19,17 +19,32 @@ Scanner::~Scanner()
 
 void Scanner::unget(Token t)
 {
+    if(t.type() == Token::EOL){
+        col_no = prev_len;
+        line_no--;
+        prev_len = 0;
+    }else {
+        col_no -= t.len();
+    }
     ungot.push(t);
 }
 
 Token Scanner::getNewToken()
 {
+    int s = 1;
     while(true){
         char ch = source.peek();
         if(isdigit(ch)){
-            int i;
-            source >> i;
-            Token T(Token::NUMBER, i);
+            int i = 0;
+            int len = 0;
+            while(isdigit(ch)){
+                i*=10;
+                i+=ch-'0';
+                len++;
+                source.get();
+                ch=source.peek();
+            }
+            Token T(Token::NUMBER, i, len);
             return T;
         }
         switch(ch){
@@ -41,31 +56,31 @@ Token Scanner::getNewToken()
         case '+':
         case '-':
             source.get();
-            return Token(Token::ADDOP, ch);
+            return Token(Token::ADDOP, ch, s);
         case '*':
         case '/':
             source.get();
-            return Token(Token::MULTOP, ch);
+            return Token(Token::MULTOP, ch, s);
         case '\n':
         case '\r':
-            line_no++;
             source.get();
-            return Token(Token::EOL, ch);
+            return Token(Token::EOL, ch, s);
         case '(':
             source.get();
-            return Token(Token::LPAR, ch);
+            return Token(Token::LPAR, ch, s);
         case ')':
             source.get();
-            return Token(Token::RPAR, ch);
+            return Token(Token::RPAR, ch, s);
         case 'q':
             source.get();
-            return Token(Token::END, ch);
+            return Token(Token::END, ch, s);
         case ' ':
         case '\t':
             source.get();
+            s++;
             continue;
         default:
-            return Token(Token::CHAR, source.get());
+            return Token(Token::CHAR, source.get(), s);
         }
     }
     return Token();
@@ -82,5 +97,13 @@ Token Scanner::getNextToken()
             t = getNewToken();
         }
     }while(!t.valid());
+    if(t.type() == Token::EOL){
+        prev_len = col_no;
+        line_no++;
+        col_no = 0;
+    }else{
+        col_no += t.len();
+    }
+
     return t;
 }

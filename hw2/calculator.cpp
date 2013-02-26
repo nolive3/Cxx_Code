@@ -1,4 +1,5 @@
 #include "calculator.h"
+#include "calc_exception.h"
 #include <sstream>
 
 Calculator::Calculator(Scanner& source) : scan_stream(source)
@@ -13,21 +14,23 @@ Calculator::~Calculator()
 
 bool Calculator::run(std::ostream& output, std::ostream& err)
 {
-
-    Token t = line();
-    if(t.type() == Token::END){
-        output<<"Good bye!"<<std::endl;
-        return false;
-    }
-    if(t.type() == Token::EXPR){
-        Fraction res = t.value().f;
-
-        if(res.is_integer()){
-            output<<(int)res<<std::endl;
-        } else {
-            output<<res<<std::endl;
+    try{
+        Token t = line();
+        if(t.type() == Token::END){
+            output<<"Good bye!"<<std::endl;
+            return false;
         }
-        return true;
+        if(t.type() == Token::EXPR){
+            Fraction res = t.value().f;
+
+            if(res.is_integer()){
+                output<<(int)res<<std::endl;
+            } else {
+                output<<res<<std::endl;
+            }
+        }
+    } catch (calc_exception& e) {
+        err << e << std::endl;
     }
     Token clr;
     while((clr=scan_stream.getNextToken()).type()!=Token::EOL){
@@ -45,14 +48,14 @@ Token Calculator::line()
             scan_stream.unget(next);
             return t;
         }
-        scan_stream.unget(next);
-        scan_stream.unget(t);
+        throw calc_exception("Additional input after expression", scan_stream.col(), scan_stream.line());
     }
     t = scan_stream.getNextToken();
     if(t.type() == Token::END){
         return t;
     }
     scan_stream.unget(t);
+    throw calc_exception("Bad expression", scan_stream.col(), scan_stream.line());
     return Token();
 }
 Token Calculator::expr()
@@ -81,10 +84,7 @@ Token Calculator::expr()
                 res = res.value().f - t.value().f;
                 break;
             default:
-                scan_stream.unget(t);
-                scan_stream.unget(a);
-                scan_stream.unget(res);
-                return Token();
+                throw calc_exception("Invalid ADDOP type", scan_stream.col(), scan_stream.line());
             }
             a = addop();
         }
@@ -94,7 +94,7 @@ Token Calculator::expr()
 }
 Token Calculator::term()
 {
-    Token res(Token::TERM);
+    Token res(Token::TERM, 0, 0);
     Token f = scan_stream.getNextToken();
     if(f.type() != Token::TERM){
         scan_stream.unget(f);
@@ -103,25 +103,23 @@ Token Calculator::term()
     if(f.valid()){
         Token m = mulop();
         res = f.value().f;
+        res.len(f.len());
         while(m.valid()){
             f = factor();
             if(!f.valid()){
-                scan_stream.unget(m);
-                scan_stream.unget(res);
-                return Token();
+                throw calc_exception("Expecting FACTOR", scan_stream.col(), scan_stream.line());
             }
             switch(m.value().s){
             case '*':
                 res = res.value().f * f.value().f;
+                res.len(f.len()+m.len());
                 break;
             case '/':
                 res = res.value().f / f.value().f;
+                res.len(f.len()+m.len());
                 break;
             default:
-                scan_stream.unget(f);
-                scan_stream.unget(m);
-                scan_stream.unget(res);
-                return Token();
+                throw calc_exception("Invalid MULTOP type", scan_stream.col(), scan_stream.line());
             }
             m = mulop();
         }
@@ -144,12 +142,12 @@ Token Calculator::factor()
             if(par2.type()==Token::RPAR){
                 return res = exp.value().f;
             }
-            scan_stream.unget(par2);
-            scan_stream.unget(exp);
+            throw calc_exception("Expecting ')'", scan_stream.col(), scan_stream.line());
         }
+        throw calc_exception("Expecting EXPRESSION", scan_stream.col(), scan_stream.line());
     }
     scan_stream.unget(par);
-    return Token();
+    throw calc_exception("Expecting NUMBER or '('", scan_stream.col(), scan_stream.line());
 }
 Token Calculator::addop()
 {
