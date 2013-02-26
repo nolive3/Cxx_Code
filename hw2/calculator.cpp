@@ -48,6 +48,7 @@ Token Calculator::line()
             scan_stream.unget(next);
             return t;
         }
+        scan_stream.unget(next);
         throw calc_exception("Additional input after expression", scan_stream.col(), scan_stream.line());
     }
     t = scan_stream.getNextToken();
@@ -60,7 +61,7 @@ Token Calculator::line()
 }
 Token Calculator::expr()
 {
-    Token res(Token::EXPR);
+    Token res(Token::EXPR, 0, 0);
     Token t = scan_stream.getNextToken();
     if(t.type() != Token::EXPR){
         scan_stream.unget(t);
@@ -69,12 +70,11 @@ Token Calculator::expr()
     if(t.valid()){
         Token a = addop();
         res = t.value().f;
+        res.len(t.len());
         while(a.valid()){
             t = term();
             if(!t.valid()){
-                scan_stream.unget(a);
-                scan_stream.unget(res);
-                return Token();
+                throw calc_exception("Expecting TERM", scan_stream.col(), scan_stream.line());
             }
             switch(a.value().s){
             case '+':
@@ -86,11 +86,12 @@ Token Calculator::expr()
             default:
                 throw calc_exception("Invalid ADDOP type", scan_stream.col(), scan_stream.line());
             }
+            res.len(t.len()+a.len());
             a = addop();
         }
         return res;
     }
-    return Token();
+    throw calc_exception("Expecting TERM", scan_stream.col(), scan_stream.line());
 }
 Token Calculator::term()
 {
@@ -112,15 +113,14 @@ Token Calculator::term()
             switch(m.value().s){
             case '*':
                 res = res.value().f * f.value().f;
-                res.len(f.len()+m.len());
                 break;
             case '/':
                 res = res.value().f / f.value().f;
-                res.len(f.len()+m.len());
                 break;
             default:
                 throw calc_exception("Invalid MULTOP type", scan_stream.col(), scan_stream.line());
             }
+            res.len(f.len()+m.len());
             m = mulop();
         }
         return res;
@@ -129,9 +129,10 @@ Token Calculator::term()
 }
 Token Calculator::factor()
 {
-    Token res(Token::FACTOR);
+    Token res(Token::FACTOR, 0, 0);
     Token num = number();
     if(num.valid()){
+        res.len(num.len());
         return res = num.value().f;
     }
     Token par = scan_stream.getNextToken();
@@ -140,8 +141,10 @@ Token Calculator::factor()
         if(exp.valid()){
             Token par2 = scan_stream.getNextToken();
             if(par2.type()==Token::RPAR){
+                res.len(par.len()+exp.len()+par2.len());
                 return res = exp.value().f;
             }
+            scan_stream.unget(par2);
             throw calc_exception("Expecting ')'", scan_stream.col(), scan_stream.line());
         }
         throw calc_exception("Expecting EXPRESSION", scan_stream.col(), scan_stream.line());

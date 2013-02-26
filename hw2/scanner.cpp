@@ -26,6 +26,7 @@ void Scanner::unget(Token t)
     }else {
         col_no -= t.len();
     }
+    std::clog << "Returned " << t << std::endl;
     ungot.push(t);
 }
 
@@ -104,6 +105,6 @@ Token Scanner::getNextToken()
     }else{
         col_no += t.len();
     }
-
+    std::clog << "Got " << t << std::endl;
     return t;
 }
