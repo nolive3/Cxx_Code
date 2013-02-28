@@ -19,9 +19,9 @@ class Token
         Token(Fraction new_val);
         Token(int new_val);
         Token();
-        ~Token();
-        Token(const Token& other);
-        Token& operator=(const Token& other); // this is the only way to change the type of an existing token
+        ~Token() = default;
+        Token(const Token& other) = default;
+        Token& operator=(const Token& other) = default; // this is the only way to change the type of an existing token
         Token& operator=(const char& new_value); // assign a new value to the token
         Token& operator=(const Fraction& new_value); // assign a new value to the token
         Token& operator=(const int& new_value); // assign a new value to the token
@@ -35,7 +35,6 @@ class Token
         int m_len;
         token_t token_type;
         val_t token_value;
-        void swap(Token&, Token&);
 };
 
 #endif // TOKEN_H

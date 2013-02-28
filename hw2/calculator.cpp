@@ -14,6 +14,7 @@ Calculator::~Calculator()
 
 bool Calculator::run(std::ostream& output, std::ostream& err)
 {
+    std::cerr << "---- ---- ---- Starting Line " << scan_stream.line() << " ---- ---- ----" << std::endl;
     try{
         Token t = line();
         if(t.type() == Token::END){
@@ -34,6 +35,7 @@ bool Calculator::run(std::ostream& output, std::ostream& err)
     }
     Token clr;
     while((clr=scan_stream.getNextToken()).type()!=Token::EOL){
+            std::cerr << "Destroying: " << clr << std::endl;
     }
     return true;
 }
@@ -41,7 +43,13 @@ bool Calculator::run(std::ostream& output, std::ostream& err)
 
 Token Calculator::line()
 {
-    Token t = expr();
+    Token t;
+    t = scan_stream.getNextToken();
+    if(t.type() == Token::END){
+        return t;
+    }
+    scan_stream.unget(t);
+    t = expr();
     if(t.valid()){
         Token next = scan_stream.getNextToken();
         if(next.type() == Token::EOL || (next.type() == Token::CHAR && next.value().s == '#')){
@@ -50,10 +58,6 @@ Token Calculator::line()
         }
         scan_stream.unget(next);
         throw calc_exception("Additional input after expression", scan_stream.col(), scan_stream.line());
-    }
-    t = scan_stream.getNextToken();
-    if(t.type() == Token::END){
-        return t;
     }
     scan_stream.unget(t);
     throw calc_exception("Bad expression", scan_stream.col(), scan_stream.line());
@@ -137,20 +141,22 @@ Token Calculator::factor()
     }
     Token par = scan_stream.getNextToken();
     if(par.type()==Token::LPAR){
-        Token exp = expr();
-        if(exp.valid()){
-            Token par2 = scan_stream.getNextToken();
-            if(par2.type()==Token::RPAR){
-                res.len(par.len()+exp.len()+par2.len());
-                return res = exp.value().f;
-            }
-            scan_stream.unget(par2);
-            throw calc_exception("Expecting ')'", scan_stream.col(), scan_stream.line());
+        Token exp;
+        try{
+             exp = expr();
+        } catch (calc_exception& e) {
+            throw calc_exception("Expecting EXPRESSION", scan_stream.col(), scan_stream.line());
         }
-        throw calc_exception("Expecting EXPRESSION", scan_stream.col(), scan_stream.line());
+        Token par2 = scan_stream.getNextToken();
+        if(par2.type()==Token::RPAR){
+            res.len(par.len()+exp.len()+par2.len());
+            return res = exp.value().f;
+        }
+        scan_stream.unget(par2);
+        throw calc_exception("Expecting ')'", scan_stream.col(), scan_stream.line());
     }
     scan_stream.unget(par);
-    throw calc_exception("Expecting NUMBER or '('", scan_stream.col(), scan_stream.line());
+    throw calc_exception("No Valid FACTOR", scan_stream.col(), scan_stream.line());
 }
 Token Calculator::addop()
 {
@@ -186,6 +192,7 @@ Token Calculator::number()
 Token Calculator::fraction()
 {
     Token f = scan_stream.getNextToken();
+    int col;
     if(f.type() == Token::CHAR && f.value().s == 'F'){
         Token par = scan_stream.getNextToken();
         if(par.type() == Token::LPAR){
@@ -197,17 +204,23 @@ Token Calculator::fraction()
                     if(n2.valid()){
                         Token par2 = scan_stream.getNextToken();
                         if(par2.type() == Token::RPAR){
-                            return Token(Token::NUMBER, n1.value().f/n2.value().f);
+                            return Token(Token::NUMBER, n1.value().f/n2.value().f, f.len()+par.len()+n1.len()+div.len()+n2.len()+par2.len());
                         }
                         scan_stream.unget(par2);
+                        col = scan_stream.col();
                         scan_stream.unget(n2);
+                        throw calc_exception("Fraction format requires ')'", col, scan_stream.line());
                     }
                 }
                 scan_stream.unget(div);
+                col = scan_stream.col();
                 scan_stream.unget(n1);
+                throw calc_exception("Fraction format requires '/'", col, scan_stream.line());
             }
         }
+        col = scan_stream.col();
         scan_stream.unget(par);
+        throw calc_exception("Fraction format requires '('", col, scan_stream.line());
     }
     scan_stream.unget(f);
     return Token();

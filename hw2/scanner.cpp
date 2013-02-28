@@ -26,13 +26,13 @@ void Scanner::unget(Token t)
     }else {
         col_no -= t.len();
     }
-    std::clog << "Returned " << t << std::endl;
     ungot.push(t);
+    std::cerr<< "\t\tPutting Back: " << t << std::endl;
 }
 
 Token Scanner::getNewToken()
 {
-    int s = 1;
+    int s = 0;
     while(true){
         char ch = source.peek();
         if(isdigit(ch)){
@@ -45,7 +45,7 @@ Token Scanner::getNewToken()
                 source.get();
                 ch=source.peek();
             }
-            Token T(Token::NUMBER, i, len);
+            Token T(Token::NUMBER, i, len+s);
             return T;
         }
         switch(ch){
@@ -57,31 +57,31 @@ Token Scanner::getNewToken()
         case '+':
         case '-':
             source.get();
-            return Token(Token::ADDOP, ch, s);
+            return Token(Token::ADDOP, ch, s+1);
         case '*':
         case '/':
             source.get();
-            return Token(Token::MULTOP, ch, s);
+            return Token(Token::MULTOP, ch, s+1);
         case '\n':
         case '\r':
             source.get();
-            return Token(Token::EOL, ch, s);
+            return Token(Token::EOL, ch, s+1);
         case '(':
             source.get();
-            return Token(Token::LPAR, ch, s);
+            return Token(Token::LPAR, ch, s+1);
         case ')':
             source.get();
-            return Token(Token::RPAR, ch, s);
+            return Token(Token::RPAR, ch, s+1);
         case 'q':
             source.get();
-            return Token(Token::END, ch, s);
+            return Token(Token::END, ch, s+1);
         case ' ':
         case '\t':
             source.get();
             s++;
             continue;
         default:
-            return Token(Token::CHAR, source.get(), s);
+            return Token(Token::CHAR, source.get(), s+1);
         }
     }
     return Token();
@@ -101,10 +101,10 @@ Token Scanner::getNextToken()
     if(t.type() == Token::EOL){
         prev_len = col_no;
         line_no++;
-        col_no = 0;
+        col_no = 1;
     }else{
         col_no += t.len();
     }
-    std::clog << "Got " << t << std::endl;
+    std::cerr<< "\t\tReturning: " << t << std::endl;
     return t;
 }

@@ -26,12 +26,10 @@ Token::Token(token_t new_type, char new_val, int nlen) : m_len(nlen), token_type
 
 Token::Token(token_t new_type, Fraction new_val, int nlen) : m_len(nlen), token_type(new_type), token_value{new_val}
 {
-    //ctor
 }
 
 Token::Token(token_t new_type, int new_val, int nlen) : m_len(nlen), token_type(new_type), token_value{Fraction(new_val)}
 {
-    //ctor
 }
 
 Token::Token() : Token(INVALID)
@@ -39,27 +37,9 @@ Token::Token() : Token(INVALID)
     //ctor
 }
 
-Token::~Token()
-{
-    //dtor
-}
-
-Token::Token(const Token& other) : m_len(other.m_len), token_type(other.token_type), token_value(other.token_value)
-{
-    //copy ctor
-}
-
 bool Token::valid()
 {
     return token_type != Token::INVALID;
-}
-
-Token& Token::operator=(const Token& rhs)
-{
-    if (this == &rhs) return *this; // handle self assignment
-    Token tmp(rhs);
-    Token::swap(*this,tmp);
-    return *this;
 }
 
 Token& Token::operator=(const char& val)
@@ -76,13 +56,6 @@ Token& Token::operator=(const Fraction& val)
 {
     token_value.f = val;
     return *this;
-}
-
-
-
-void Token::swap(Token& a, Token& b){
-    std::swap(a.token_type, b.token_type);
-    std::swap(a.token_value, b.token_value);
 }
 
 std::ostream& operator<<(std::ostream& output, const Token& t) {
@@ -128,7 +101,7 @@ std::ostream& operator<<(std::ostream& output, const Token& t) {
         output<<"BAD_TYPE";
         break;
     }
-    output <<")";
+    output << ") Len: " << t.m_len;
     return output;
 }
 

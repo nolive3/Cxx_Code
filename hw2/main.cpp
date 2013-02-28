@@ -17,16 +17,22 @@ FRACTION => F(FACTOR/FACTOR)
 int main(void){
     std::ifstream in;
     in.open("program.txt");
+    std::ofstream log;
+    log.open("calculator.log");
     std::ofstream err;
-    err.open("calculator.log");
+    err.open("debug.log");
     Scanner scan{in};
     Calculator calc{scan};
-    std::streambuf *logbuff = std::clog.rdbuf(err.rdbuf());
+    std::streambuf *logbuff = std::clog.rdbuf(log.rdbuf());
+    std::streambuf *errbuff = std::cerr.rdbuf(err.rdbuf());
+
     while(calc.run(std::cout, std::clog)){
 
     }
     in.close();
+    log.close();
     err.close();
     std::clog.rdbuf(logbuff);
+    std::cerr.rdbuf(errbuff);
     return 0;
 }

@@ -1,0 +1,516 @@
+---- ---- ---- Starting Line 1 ---- ---- ----
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Putting Back: ADDOP(+) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Returning: CHAR(#) Len: 6
+		Putting Back: CHAR(#) Len: 6
+		Returning: CHAR(#) Len: 6
+		Putting Back: CHAR(#) Len: 6
+		Returning: CHAR(#) Len: 6
+		Putting Back: CHAR(#) Len: 6
+		Returning: CHAR(#) Len: 6
+Destroying: CHAR(#) Len: 6
+		Returning: CHAR(t) Len: 2
+Destroying: CHAR(t) Len: 2
+		Returning: CHAR(h) Len: 1
+Destroying: CHAR(h) Len: 1
+		Returning: CHAR(i) Len: 1
+Destroying: CHAR(i) Len: 1
+		Returning: CHAR(s) Len: 1
+Destroying: CHAR(s) Len: 1
+		Returning: CHAR(i) Len: 2
+Destroying: CHAR(i) Len: 2
+		Returning: CHAR(s) Len: 1
+Destroying: CHAR(s) Len: 1
+		Returning: CHAR(a) Len: 2
+Destroying: CHAR(a) Len: 2
+		Returning: CHAR(c) Len: 2
+Destroying: CHAR(c) Len: 2
+		Returning: CHAR(o) Len: 1
+Destroying: CHAR(o) Len: 1
+		Returning: CHAR(m) Len: 1
+Destroying: CHAR(m) Len: 1
+		Returning: CHAR(m) Len: 1
+Destroying: CHAR(m) Len: 1
+		Returning: CHAR(e) Len: 1
+Destroying: CHAR(e) Len: 1
+		Returning: CHAR(n) Len: 1
+Destroying: CHAR(n) Len: 1
+		Returning: CHAR(t) Len: 1
+Destroying: CHAR(t) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 2 ---- ---- ----
+		Returning: NUMBER(F(2/1)) Len: 1
+		Putting Back: NUMBER(F(2/1)) Len: 1
+		Returning: NUMBER(F(2/1)) Len: 1
+		Putting Back: NUMBER(F(2/1)) Len: 1
+		Returning: NUMBER(F(2/1)) Len: 1
+		Putting Back: NUMBER(F(2/1)) Len: 1
+		Returning: NUMBER(F(2/1)) Len: 1
+		Returning: MULTOP(*) Len: 1
+		Returning: NUMBER(F(7/1)) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 3 ---- ---- ----
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Putting Back: ADDOP(+) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Returning: NUMBER(F(2/1)) Len: 2
+		Putting Back: NUMBER(F(2/1)) Len: 2
+		Returning: NUMBER(F(2/1)) Len: 2
+		Returning: MULTOP(*) Len: 5
+		Returning: LPAR(() Len: 5
+		Putting Back: LPAR(() Len: 5
+		Returning: LPAR(() Len: 5
+		Putting Back: LPAR(() Len: 5
+		Returning: LPAR(() Len: 5
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 4 ---- ---- ----
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Putting Back: NUMBER(F(1/1)) Len: 1
+		Returning: NUMBER(F(1/1)) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 5 ---- ---- ----
+		Returning: NUMBER(F(7/1)) Len: 12
+		Putting Back: NUMBER(F(7/1)) Len: 12
+		Returning: NUMBER(F(7/1)) Len: 12
+		Putting Back: NUMBER(F(7/1)) Len: 12
+		Returning: NUMBER(F(7/1)) Len: 12
+		Putting Back: NUMBER(F(7/1)) Len: 12
+		Returning: NUMBER(F(7/1)) Len: 12
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 6 ---- ---- ----
+		Returning: CHAR(F) Len: 9
+		Putting Back: CHAR(F) Len: 9
+		Returning: CHAR(F) Len: 9
+		Putting Back: CHAR(F) Len: 9
+		Returning: CHAR(F) Len: 9
+		Putting Back: CHAR(F) Len: 9
+		Returning: CHAR(F) Len: 9
+		Putting Back: CHAR(F) Len: 9
+		Returning: CHAR(F) Len: 9
+		Returning: LPAR(() Len: 6
+		Returning: NUMBER(F(1/1)) Len: 8
+		Returning: MULTOP(/) Len: 10
+		Returning: NUMBER(F(56/1)) Len: 10
+		Returning: CHAR(p) Len: 6
+		Putting Back: CHAR(p) Len: 6
+		Putting Back: FACTOR(F(56/1)) Len: 10
+		Returning: FACTOR(F(56/1)) Len: 10
+Destroying: FACTOR(F(56/1)) Len: 10
+		Returning: CHAR(p) Len: 6
+Destroying: CHAR(p) Len: 6
+		Returning: RPAR()) Len: 4
+Destroying: RPAR()) Len: 4
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 7 ---- ---- ----
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(3/1)) Len: 1
+		Returning: MULTOP(/) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 8 ---- ---- ----
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(4/1)) Len: 1
+		Returning: MULTOP(/) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Putting Back: FACTOR(F(5/1)) Len: 1
+		Returning: FACTOR(F(5/1)) Len: 1
+Destroying: FACTOR(F(5/1)) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 9 ---- ---- ----
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		Returning: CHAR(F) Len: 1
+		Returning: NUMBER(F(4/1)) Len: 2
+		Putting Back: NUMBER(F(4/1)) Len: 2
+		Returning: NUMBER(F(4/1)) Len: 2
+Destroying: NUMBER(F(4/1)) Len: 2
+		Returning: MULTOP(/) Len: 1
+Destroying: MULTOP(/) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+Destroying: NUMBER(F(5/1)) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 10 ---- ---- ----
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Putting Back: NUMBER(F(8/1)) Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Putting Back: NUMBER(F(8/1)) Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Returning: ADDOP(+) Len: 2
+		Putting Back: ADDOP(+) Len: 2
+		Returning: ADDOP(+) Len: 2
+		Returning: NUMBER(F(7/1)) Len: 2
+		Putting Back: NUMBER(F(7/1)) Len: 2
+		Returning: NUMBER(F(7/1)) Len: 2
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Returning: MULTOP(*) Len: 2
+		Returning: CHAR(F) Len: 2
+		Putting Back: CHAR(F) Len: 2
+		Returning: CHAR(F) Len: 2
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(4/1)) Len: 1
+		Returning: CHAR(.) Len: 1
+		Putting Back: CHAR(.) Len: 1
+		Putting Back: FACTOR(F(4/1)) Len: 1
+		Returning: FACTOR(F(4/1)) Len: 1
+Destroying: FACTOR(F(4/1)) Len: 1
+		Returning: CHAR(.) Len: 1
+Destroying: CHAR(.) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+Destroying: NUMBER(F(5/1)) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 11 ---- ---- ----
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(4/1)) Len: 1
+		Putting Back: NUMBER(F(4/1)) Len: 1
+		Returning: NUMBER(F(4/1)) Len: 1
+		Putting Back: NUMBER(F(4/1)) Len: 1
+		Returning: NUMBER(F(4/1)) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Putting Back: ADDOP(+) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 12 ---- ---- ----
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Putting Back: ADDOP(+) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Putting Back: NUMBER(F(8/1)) Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 13 ---- ---- ----
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(7/1)) Len: 1
+		Putting Back: NUMBER(F(7/1)) Len: 1
+		Returning: NUMBER(F(7/1)) Len: 1
+		Putting Back: NUMBER(F(7/1)) Len: 1
+		Returning: NUMBER(F(7/1)) Len: 1
+		Returning: MULTOP(*) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Putting Back: RPAR()) Len: 1
+		Returning: RPAR()) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 14 ---- ---- ----
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Putting Back: NUMBER(F(8/1)) Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Putting Back: NUMBER(F(8/1)) Len: 1
+		Returning: NUMBER(F(8/1)) Len: 1
+		Returning: MULTOP(*) Len: 2
+		Returning: NUMBER(F(9/1)) Len: 2
+		Returning: CHAR(e) Len: 1
+		Putting Back: CHAR(e) Len: 1
+		Returning: CHAR(e) Len: 1
+		Putting Back: CHAR(e) Len: 1
+		Returning: CHAR(e) Len: 1
+		Putting Back: CHAR(e) Len: 1
+		Returning: CHAR(e) Len: 1
+Destroying: CHAR(e) Len: 1
+		Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+		Returning: ADDOP(+) Len: 2
+Destroying: ADDOP(+) Len: 2
+		Returning: NUMBER(F(98/1)) Len: 3
+Destroying: NUMBER(F(98/1)) Len: 3
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 15 ---- ---- ----
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Putting Back: ADDOP(+) Len: 1
+		Returning: ADDOP(+) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 16 ---- ---- ----
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		Returning: NUMBER(F(6/1)) Len: 1
+		Returning: MULTOP(*) Len: 2
+		Returning: NUMBER(F(7/1)) Len: 2
+		Returning: ADDOP(+) Len: 2
+		Putting Back: ADDOP(+) Len: 2
+		Returning: ADDOP(+) Len: 2
+		Returning: NUMBER(F(5/1)) Len: 2
+		Putting Back: NUMBER(F(5/1)) Len: 2
+		Returning: NUMBER(F(5/1)) Len: 2
+		Returning: ADDOP(-) Len: 2
+		Putting Back: ADDOP(-) Len: 2
+		Returning: ADDOP(-) Len: 2
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 17 ---- ---- ----
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		Returning: LPAR(() Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		Returning: NUMBER(F(5/1)) Len: 1
+		Returning: MULTOP(*) Len: 2
+		Returning: NUMBER(F(9/1)) Len: 2
+		Returning: RPAR()) Len: 2
+		Putting Back: RPAR()) Len: 2
+		Returning: RPAR()) Len: 2
+		Putting Back: RPAR()) Len: 2
+		Returning: RPAR()) Len: 2
+		Returning: ADDOP(+) Len: 2
+		Putting Back: ADDOP(+) Len: 2
+		Returning: ADDOP(+) Len: 2
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+		Putting Back: EOL(EOL) Len: 1
+		Returning: EOL(EOL) Len: 1
+---- ---- ---- Starting Line 18 ---- ---- ----
+		Returning: END(END) Len: 1
