@@ -196,27 +196,33 @@ Token Calculator::fraction()
     if(f.type() == Token::CHAR && f.value().s == 'F'){
         Token par = scan_stream.getNextToken();
         if(par.type() == Token::LPAR){
-            Token n1 = factor();
-            if(n1.valid()){
-                Token div = scan_stream.getNextToken();
-                if(div.type() == Token::MULTOP && div.value().s == '/'){
-                    Token n2 = factor();
-                    if(n2.valid()){
-                        Token par2 = scan_stream.getNextToken();
-                        if(par2.type() == Token::RPAR){
-                            return Token(Token::NUMBER, n1.value().f/n2.value().f, f.len()+par.len()+n1.len()+div.len()+n2.len()+par2.len());
-                        }
-                        scan_stream.unget(par2);
-                        col = scan_stream.col();
-                        scan_stream.unget(n2);
-                        throw calc_exception("Fraction format requires ')'", col, scan_stream.line());
-                    }
-                }
-                scan_stream.unget(div);
-                col = scan_stream.col();
-                scan_stream.unget(n1);
-                throw calc_exception("Fraction format requires '/'", col, scan_stream.line());
+            Token n1;
+            try{
+                n1 = factor();
+            } catch (calc_exception& e) {
+                throw calc_exception("Fraction format requires FACTOR", scan_stream.col(), scan_stream.line());
             }
+            Token div = scan_stream.getNextToken();
+            if(div.type() == Token::MULTOP && div.value().s == '/'){
+                Token n2;
+                try{
+                    n2 = factor();
+                } catch (calc_exception& e) {
+                    throw calc_exception("Fraction format requires FACTOR", scan_stream.col(), scan_stream.line());
+                }
+                    Token par2 = scan_stream.getNextToken();
+                    if(par2.type() == Token::RPAR){
+                        return Token(Token::NUMBER, n1.value().f/n2.value().f, f.len()+par.len()+n1.len()+div.len()+n2.len()+par2.len());
+                    }
+                    scan_stream.unget(par2);
+                    col = scan_stream.col();
+                    scan_stream.unget(n2);
+                    throw calc_exception("Fraction format requires ')'", col, scan_stream.line());
+            }
+            scan_stream.unget(div);
+            col = scan_stream.col();
+            scan_stream.unget(n1);
+            throw calc_exception("Fraction format requires '/'", col, scan_stream.line());
         }
         col = scan_stream.col();
         scan_stream.unget(par);
