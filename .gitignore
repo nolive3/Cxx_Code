@@ -1,6 +1,9 @@
 # Build remnants
 *.o
 *.exe
+*.layout
+*.depend
+
 
 
 
