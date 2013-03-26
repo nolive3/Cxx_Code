@@ -2,6 +2,7 @@
 #include "scanner.h"
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 /*My grammar for this iteration
 LINE => EXPR EOL | END
@@ -29,10 +30,12 @@ int main(void){
     Calculator calc{scan};
     std::streambuf *logbuff = std::clog.rdbuf(log.rdbuf());
     std::streambuf *errbuff = std::cerr.rdbuf(err.rdbuf());
+    while(calc.run(std::cout, std::clog));
 
-    while(calc.run(std::cout, std::clog)){
+    auto vars = calc.get_table();
+    remove_if(begin(vars), end(vars), [](Calculator::symbol_t& a){return !a.writen;});
+    std::cout << vars << std::endl;
 
-    }
     in.close();
     log.close();
     err.close();

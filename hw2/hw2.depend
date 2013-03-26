@@ -6,18 +6,19 @@
 	<iostream>
 	"debugvars.h"
 
-1364263272 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
+1364327229 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
 	"calculator.h"
 	"scanner.h"
 	<iostream>
 	<fstream>
+	<algorithm>
 
-1364265049 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
+1364327804 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
 	"calculator.h"
 	"calc_exception.h"
 	<sstream>
 
-1364264994 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
+1364267885 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
 	"scanner.h"
 	<iostream>
 	<vector>

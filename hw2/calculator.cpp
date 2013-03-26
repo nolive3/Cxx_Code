@@ -3,13 +3,17 @@
 #include <sstream>
 
 std::ostream& operator<<(std::ostream& output, const Calculator::symbol_t& t) {
-    output << t.name << ", " << t.val;
+    std::stringstream ss;
+    ss << t.val;
+    std::string s;
+    ss >> s;
+    output << "(" << t.name << ", " << (t.writen?s:"UNINITIALIZED") << ")";
     return output;
 }
 std::ostream& operator<<(std::ostream& output, const std::vector<Calculator::symbol_t>& vec) {
     output << "Symbol Table {";
     for(Calculator::symbol_t t : vec){
-        output << "  (" << t << ")";
+        output << t;
     }
     output << "}";
     return output;
@@ -105,6 +109,7 @@ Token Calculator::expr()
         }
         for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "Setting value of " << symbol_table[(int)t.value().f].name << " to " << e.value().f << std::endl;
         symbol_table[(int)t.value().f].val = e.value().f;
+        symbol_table[(int)t.value().f].writen = true;
     depth--;
     for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "}" << std::endl;
         return e;
@@ -355,22 +360,25 @@ Token Calculator::var()
     unsigned int i;
     for(i = 0; i < symbol_table.size(); ++i){
         if(symbol_table[i].name == sym.name){
+            if(!symbol_table[i].writen) break;// then it is still an LVAR
             for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "Variable " << sym.name << " at pos " << i << " already exists" << std::endl;
             if(expect == Token::LVAR){
                 scan_stream.unget(Token(Token::RVAR, symbol_table[i].val, len));
                 throw calc_exception("Multiple definition of variable " + sym.name, scan_stream.col(), scan_stream.line());
             }
-    depth--;
-    for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "}" << std::endl;
+            depth--;
+            for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "}" << std::endl;
             return Token(Token::RVAR, symbol_table[i].val, len);
         }
     }
+    if(i == symbol_table.size()){
+        symbol_table.push_back(sym);
+        for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "Defining variable " << sym.name << " at pos " << i << std::endl;
+    }
     if(expect == Token::RVAR){
         scan_stream.unget(Token(Token::LVAR, (int)i, len));
-        throw calc_exception("Use of undefined variable " + sym.name, scan_stream.col(), scan_stream.line());
+        throw calc_exception("Use of uninitialised variable " + sym.name, scan_stream.col(), scan_stream.line());
     }
-    symbol_table.push_back(sym);
-    for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "Defining variable " << sym.name << " at pos " << i << std::endl;
     depth--;
     for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr << "}" << std::endl;
     return Token(Token::LVAR, (int)i, len);

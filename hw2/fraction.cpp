@@ -52,7 +52,10 @@ const Fraction Fraction::operator-() const{
     return Fraction(-m_num, m_den);
 }
 std::ostream& operator<<(std::ostream& out, const Fraction& frac){
-    out<<"F("<<frac.m_num<<"/"<<frac.m_den<<")";
+    if(frac.m_den != 1)
+        out<<"F("<<frac.m_num<<"/"<<frac.m_den<<")";
+    else
+        out << frac.m_num;
     return out;
 }
 bool operator==(const Fraction& lhs, const Fraction& rhs){

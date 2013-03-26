@@ -12,6 +12,7 @@ Error at Line 16, Column 4: Expecting ')'
 Error at Line 17, Column 1: No Valid FACTOR
 Error at Line 18, Column 10: No Valid FACTOR
 Error at Line 19, Column 7: No Valid FACTOR
-Error at Line 24, Column 1: Use of undefined variable a
+Error at Line 24, Column 1: Use of uninitialised variable a
+Error at Line 25, Column 4: Use of uninitialised variable a
 Error at Line 26, Column 1: Multiple definition of variable x
-Error at Line 27, Column 1: Multiple definition of variable a
+Error at Line 28, Column 1: Additional input after expression
