@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <string>
 #include <iostream>
+#include "debugvars.h"
 
 
 class calc_exception : public std::logic_error

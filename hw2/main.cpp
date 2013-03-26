@@ -4,15 +4,19 @@
 #include <fstream>
 
 /*My grammar for this iteration
-LINE => EXP EOL | END
-EXPR => TERM {ADDOP TERM}*
+LINE => EXPR EOL | END
+EXPR => TERM {ADDOP TERM}* | LVAR ASSIGN EXPR
 TERM => FACTOR {MULOP FACTOR}*
 FACTOR => NUMBER | (EXPR)
 MULOP => * | /
 ADDOP => + | -
-NUMBER => int | FRACTION
+NUMBER => int | FRACTION | RVAR
 FRACTION => F(FACTOR/FACTOR)
+RVAR => lower case char string MUST BE IN SYMBOL TABLE
+LVAR => lower case char string MUST NOT BE IN SYMBOL TABLE
 */
+
+int depth = 0; //for debug
 
 int main(void){
     std::ifstream in;

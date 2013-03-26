@@ -27,7 +27,7 @@ void Scanner::unget(Token t)
         col_no -= t.len();
     }
     ungot.push(t);
-    std::cerr<< "\t\tPutting Back: " << t << std::endl;
+    for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr<< "Putting Back: " << t << std::endl;
 }
 
 Token Scanner::getNewToken()
@@ -51,6 +51,8 @@ Token Scanner::getNewToken()
         switch(ch){
         case EOF:
         {
+            if(source.eof())
+                return Token(Token::END, EOF);
             source.clear();
             return Token(EOF);
         }
@@ -58,6 +60,9 @@ Token Scanner::getNewToken()
         case '-':
             source.get();
             return Token(Token::ADDOP, ch, s+1);
+        case '=':
+            source.get();
+            return Token(Token::ASSIGN, ch, s+1);
         case '*':
         case '/':
             source.get();
@@ -105,6 +110,6 @@ Token Scanner::getNextToken()
     }else{
         col_no += t.len();
     }
-    std::cerr<< "\t\tReturning: " << t << std::endl;
+    for(int i = 0; i < depth; ++i) std::cerr << "\t"; std::cerr<< "Returning: " << t << std::endl;
     return t;
 }

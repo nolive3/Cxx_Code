@@ -1,6 +1,7 @@
 #ifndef FRACTION_H
 #define FRACTION_H
 #include <iostream>
+#include "debugvars.h"
 
 class Fraction
 {

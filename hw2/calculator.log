@@ -1,14 +1,17 @@
-Error at Line 1, Column 6: Additional input after expression
-Error at Line 4, Column 15: Expecting EXPRESSION
-Error at Line 7, Column 44: Fraction format requires ')'
-Error at Line 8, Column 5: Fraction format requires FACTOR
-Error at Line 9, Column 6: Fraction format requires ')'
-Error at Line 10, Column 4: Fraction format requires '('
-Error at Line 11, Column 14: Expecting EXPRESSION
-Error at Line 12, Column 9: Expecting ')'
-Error at Line 13, Column 4: Additional input after expression
-Error at Line 14, Column 7: Expecting ')'
-Error at Line 15, Column 7: Expecting ')'
-Error at Line 16, Column 3: No Valid FACTOR
-Error at Line 17, Column 12: No Valid FACTOR
-Error at Line 18, Column 11: No Valid FACTOR
+Error at Line 1, Column 5: Additional input after expression
+Error at Line 4, Column 11: Expecting EXPRESSION
+Error at Line 7, Column 46: Fraction format requires ')'
+Error at Line 9, Column 3: Fraction format requires FACTOR
+Error at Line 10, Column 5: Fraction format requires ')'
+Error at Line 11, Column 3: Fraction format requires '('
+Error at Line 12, Column 9: Expecting EXPRESSION
+Error at Line 13, Column 2: Expecting ')'
+Error at Line 14, Column 3: Additional input after expression
+Error at Line 15, Column 2: Expecting ')'
+Error at Line 16, Column 4: Expecting ')'
+Error at Line 17, Column 1: No Valid FACTOR
+Error at Line 18, Column 10: No Valid FACTOR
+Error at Line 19, Column 7: No Valid FACTOR
+Error at Line 24, Column 1: Use of undefined variable a
+Error at Line 26, Column 1: Multiple definition of variable x
+Error at Line 27, Column 1: Multiple definition of variable a

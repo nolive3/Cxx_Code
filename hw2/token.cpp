@@ -61,6 +61,13 @@ Token& Token::operator=(const Fraction& val)
 std::ostream& operator<<(std::ostream& output, const Token& t) {
     output <<  t.token_type << "(";
     switch(t.token_type){
+    case Token::ASSIGN:
+        output<<"=";
+        break;
+    case Token::LVAR:
+    case Token::RVAR:
+        output<<t.token_value.f;
+        break;
     case Token::INVALID:
         output<<"INVALID";
         break;
@@ -107,6 +114,15 @@ std::ostream& operator<<(std::ostream& output, const Token& t) {
 
 std::ostream& operator<<(std::ostream& output, const Token::token_t& t) {
     switch(t){
+    case Token::ASSIGN:
+        output<<"ASSIGN";
+        break;
+    case Token::LVAR:
+        output<<"LVAR";
+        break;
+    case Token::RVAR:
+        output<<"RVAR";
+        break;
     case Token::INVALID:
         output<<"INVALID";
         break;

@@ -1,543 +1,1651 @@
 ---- ---- ---- Starting Line 1 ---- ---- ----
+line{
+	Returning: NUMBER(F(12341/1)) Len: 5
+	Putting Back: NUMBER(F(12341/1)) Len: 5
+	expr{
 		Returning: NUMBER(F(12341/1)) Len: 5
 		Putting Back: NUMBER(F(12341/1)) Len: 5
-		Returning: NUMBER(F(12341/1)) Len: 5
-		Putting Back: NUMBER(F(12341/1)) Len: 5
-		Returning: NUMBER(F(12341/1)) Len: 5
-		Putting Back: NUMBER(F(12341/1)) Len: 5
-		Returning: NUMBER(F(12341/1)) Len: 5
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
+		var{
+			Returning: NUMBER(F(12341/1)) Len: 5
+			Putting Back: NUMBER(F(12341/1)) Len: 5
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(12341/1)) Len: 5
+			Putting Back: NUMBER(F(12341/1)) Len: 5
+			factor{
+				number{
+					Returning: NUMBER(F(12341/1)) Len: 5
+				}
+			}
+			mulop{
+				Returning: CHAR(F) Len: 1
+				Putting Back: CHAR(F) Len: 1
+			}
+		}
+		addop{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+		}
+	}
+	Returning: CHAR(F) Len: 1
+	Putting Back: CHAR(F) Len: 1
+Returning: CHAR(F) Len: 1
 Destroying: CHAR(F) Len: 1
-		Returning: LPAR(() Len: 1
+Returning: LPAR(() Len: 1
 Destroying: LPAR(() Len: 1
-		Returning: NUMBER(F(234/1)) Len: 3
+Returning: NUMBER(F(234/1)) Len: 3
 Destroying: NUMBER(F(234/1)) Len: 3
-		Returning: MULTOP(/) Len: 1
+Returning: MULTOP(/) Len: 1
 Destroying: MULTOP(/) Len: 1
-		Returning: NUMBER(F(1234/1)) Len: 4
+Returning: NUMBER(F(1234/1)) Len: 4
 Destroying: NUMBER(F(1234/1)) Len: 4
-		Returning: RPAR()) Len: 1
+Returning: RPAR()) Len: 1
 Destroying: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 2 ---- ---- ----
+line{
+	Returning: NUMBER(F(1/1)) Len: 1
+	Putting Back: NUMBER(F(1/1)) Len: 1
+	expr{
 		Returning: NUMBER(F(1/1)) Len: 1
 		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Putting Back: ADDOP(+) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Returning: CHAR(#) Len: 6
-		Putting Back: CHAR(#) Len: 6
-		Returning: CHAR(#) Len: 6
-		Putting Back: CHAR(#) Len: 6
-		Returning: CHAR(#) Len: 6
-		Putting Back: CHAR(#) Len: 6
-		Returning: CHAR(#) Len: 6
+		var{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(1/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 1
+				Putting Back: ADDOP(+) Len: 1
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 1
+		}
+		term{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(1/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: CHAR(#) Len: 6
+				Putting Back: CHAR(#) Len: 6
+			}
+		}
+		addop{
+			Returning: CHAR(#) Len: 6
+			Putting Back: CHAR(#) Len: 6
+		}
+	}
+	Returning: CHAR(#) Len: 6
+	Putting Back: CHAR(#) Len: 6
+}
+Returning: CHAR(#) Len: 6
 Destroying: CHAR(#) Len: 6
-		Returning: CHAR(t) Len: 2
+Returning: CHAR(t) Len: 2
 Destroying: CHAR(t) Len: 2
-		Returning: CHAR(h) Len: 1
+Returning: CHAR(h) Len: 1
 Destroying: CHAR(h) Len: 1
-		Returning: CHAR(i) Len: 1
+Returning: CHAR(i) Len: 1
 Destroying: CHAR(i) Len: 1
-		Returning: CHAR(s) Len: 1
+Returning: CHAR(s) Len: 1
 Destroying: CHAR(s) Len: 1
-		Returning: CHAR(i) Len: 2
+Returning: CHAR(i) Len: 2
 Destroying: CHAR(i) Len: 2
-		Returning: CHAR(s) Len: 1
+Returning: CHAR(s) Len: 1
 Destroying: CHAR(s) Len: 1
-		Returning: CHAR(a) Len: 2
+Returning: CHAR(a) Len: 2
 Destroying: CHAR(a) Len: 2
-		Returning: CHAR(c) Len: 2
+Returning: CHAR(c) Len: 2
 Destroying: CHAR(c) Len: 2
-		Returning: CHAR(o) Len: 1
+Returning: CHAR(o) Len: 1
 Destroying: CHAR(o) Len: 1
-		Returning: CHAR(m) Len: 1
+Returning: CHAR(m) Len: 1
 Destroying: CHAR(m) Len: 1
-		Returning: CHAR(m) Len: 1
+Returning: CHAR(m) Len: 1
 Destroying: CHAR(m) Len: 1
-		Returning: CHAR(e) Len: 1
+Returning: CHAR(e) Len: 1
 Destroying: CHAR(e) Len: 1
-		Returning: CHAR(n) Len: 1
+Returning: CHAR(n) Len: 1
 Destroying: CHAR(n) Len: 1
-		Returning: CHAR(t) Len: 1
+Returning: CHAR(t) Len: 1
 Destroying: CHAR(t) Len: 1
-		Returning: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 3 ---- ---- ----
+line{
+	Returning: NUMBER(F(2/1)) Len: 1
+	Putting Back: NUMBER(F(2/1)) Len: 1
+	expr{
 		Returning: NUMBER(F(2/1)) Len: 1
 		Putting Back: NUMBER(F(2/1)) Len: 1
-		Returning: NUMBER(F(2/1)) Len: 1
-		Putting Back: NUMBER(F(2/1)) Len: 1
-		Returning: NUMBER(F(2/1)) Len: 1
-		Putting Back: NUMBER(F(2/1)) Len: 1
-		Returning: NUMBER(F(2/1)) Len: 1
-		Returning: MULTOP(*) Len: 1
-		Returning: NUMBER(F(7/1)) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: NUMBER(F(2/1)) Len: 1
+			Putting Back: NUMBER(F(2/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(2/1)) Len: 1
+			Putting Back: NUMBER(F(2/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(2/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: MULTOP(*) Len: 1
+			}
+			factor{
+				number{
+					Returning: NUMBER(F(7/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+			}
+		}
+		addop{
+			Returning: EOL(EOL) Len: 1
+			Putting Back: EOL(EOL) Len: 1
+		}
+	}
+	Returning: EOL(EOL) Len: 1
+	Putting Back: EOL(EOL) Len: 1
+}
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 4 ---- ---- ----
+line{
+	Returning: NUMBER(F(1/1)) Len: 1
+	Putting Back: NUMBER(F(1/1)) Len: 1
+	expr{
 		Returning: NUMBER(F(1/1)) Len: 1
 		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Putting Back: ADDOP(+) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Returning: NUMBER(F(2/1)) Len: 2
-		Putting Back: NUMBER(F(2/1)) Len: 2
-		Returning: NUMBER(F(2/1)) Len: 2
-		Returning: MULTOP(*) Len: 5
-		Returning: LPAR(() Len: 5
-		Putting Back: LPAR(() Len: 5
-		Returning: LPAR(() Len: 5
-		Putting Back: LPAR(() Len: 5
-		Returning: LPAR(() Len: 5
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(1/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 1
+				Putting Back: ADDOP(+) Len: 1
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 1
+		}
+		term{
+			Returning: NUMBER(F(2/1)) Len: 2
+			Putting Back: NUMBER(F(2/1)) Len: 2
+			factor{
+				number{
+					Returning: NUMBER(F(2/1)) Len: 2
+				}
+			}
+			mulop{
+				Returning: MULTOP(*) Len: 5
+			}
+			factor{
+				number{
+					Returning: LPAR(() Len: 5
+					Putting Back: LPAR(() Len: 5
+					fraction{
+						Returning: LPAR(() Len: 5
+						Putting Back: LPAR(() Len: 5
+					}
+					var{
+						Returning: LPAR(() Len: 5
+						Putting Back: LPAR(() Len: 5
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: LPAR(() Len: 5
+				expr{
+					Returning: EOL(EOL) Len: 1
+					Putting Back: EOL(EOL) Len: 1
+					var{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+					term{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+						factor{
+							number{
+								Returning: EOL(EOL) Len: 1
+								Putting Back: EOL(EOL) Len: 1
+								fraction{
+									Returning: EOL(EOL) Len: 1
+									Putting Back: EOL(EOL) Len: 1
+								}
+								var{
+									Returning: EOL(EOL) Len: 1
+									Putting Back: EOL(EOL) Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+							}
+							Returning: EOL(EOL) Len: 1
+							Putting Back: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 5 ---- ---- ----
+line{
+	Returning: NUMBER(F(1/1)) Len: 1
+	Putting Back: NUMBER(F(1/1)) Len: 1
+	expr{
 		Returning: NUMBER(F(1/1)) Len: 1
 		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Putting Back: NUMBER(F(1/1)) Len: 1
-		Returning: NUMBER(F(1/1)) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(1/1)) Len: 1
+			Putting Back: NUMBER(F(1/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(1/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+			}
+		}
+		addop{
+			Returning: EOL(EOL) Len: 1
+			Putting Back: EOL(EOL) Len: 1
+		}
+	}
+	Returning: EOL(EOL) Len: 1
+	Putting Back: EOL(EOL) Len: 1
+}
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 6 ---- ---- ----
+line{
+	Returning: NUMBER(F(7/1)) Len: 12
+	Putting Back: NUMBER(F(7/1)) Len: 12
+	expr{
 		Returning: NUMBER(F(7/1)) Len: 12
 		Putting Back: NUMBER(F(7/1)) Len: 12
-		Returning: NUMBER(F(7/1)) Len: 12
-		Putting Back: NUMBER(F(7/1)) Len: 12
-		Returning: NUMBER(F(7/1)) Len: 12
-		Putting Back: NUMBER(F(7/1)) Len: 12
-		Returning: NUMBER(F(7/1)) Len: 12
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: NUMBER(F(7/1)) Len: 12
+			Putting Back: NUMBER(F(7/1)) Len: 12
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(7/1)) Len: 12
+			Putting Back: NUMBER(F(7/1)) Len: 12
+			factor{
+				number{
+					Returning: NUMBER(F(7/1)) Len: 12
+				}
+			}
+			mulop{
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+			}
+		}
+		addop{
+			Returning: EOL(EOL) Len: 1
+			Putting Back: EOL(EOL) Len: 1
+		}
+	}
+	Returning: EOL(EOL) Len: 1
+	Putting Back: EOL(EOL) Len: 1
+}
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 7 ---- ---- ----
+line{
+	Returning: CHAR(F) Len: 9
+	Putting Back: CHAR(F) Len: 9
+	expr{
 		Returning: CHAR(F) Len: 9
 		Putting Back: CHAR(F) Len: 9
-		Returning: CHAR(F) Len: 9
-		Putting Back: CHAR(F) Len: 9
-		Returning: CHAR(F) Len: 9
-		Putting Back: CHAR(F) Len: 9
-		Returning: CHAR(F) Len: 9
-		Putting Back: CHAR(F) Len: 9
-		Returning: CHAR(F) Len: 9
-		Returning: LPAR(() Len: 6
-		Returning: NUMBER(F(1/1)) Len: 8
-		Returning: MULTOP(/) Len: 10
-		Returning: NUMBER(F(56/1)) Len: 10
-		Returning: CHAR(p) Len: 6
-		Putting Back: CHAR(p) Len: 6
-		Putting Back: FACTOR(F(56/1)) Len: 10
-		Returning: FACTOR(F(56/1)) Len: 10
-Destroying: FACTOR(F(56/1)) Len: 10
-		Returning: CHAR(p) Len: 6
+		var{
+			Returning: CHAR(F) Len: 9
+			Putting Back: CHAR(F) Len: 9
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: CHAR(F) Len: 9
+			Putting Back: CHAR(F) Len: 9
+			factor{
+				number{
+					Returning: CHAR(F) Len: 9
+					Putting Back: CHAR(F) Len: 9
+					fraction{
+						Returning: CHAR(F) Len: 9
+						Returning: LPAR(() Len: 6
+						factor{
+							number{
+								Returning: NUMBER(F(1/1)) Len: 8
+							}
+						}
+						Returning: MULTOP(/) Len: 10
+						factor{
+							number{
+								Returning: NUMBER(F(56/1)) Len: 13
+							}
+						}
+						Returning: CHAR(p) Len: 6
+						Putting Back: CHAR(p) Len: 6
+						Putting Back: FACTOR(F(56/1)) Len: 13
+Returning: FACTOR(F(56/1)) Len: 13
+Destroying: FACTOR(F(56/1)) Len: 13
+Returning: CHAR(p) Len: 6
 Destroying: CHAR(p) Len: 6
-		Returning: RPAR()) Len: 4
+Returning: RPAR()) Len: 4
 Destroying: RPAR()) Len: 4
-		Returning: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 12
+Symbol Table {}
 ---- ---- ---- Starting Line 8 ---- ---- ----
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(3/1)) Len: 1
-		Returning: MULTOP(/) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-Destroying: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
+line{
+	Returning: CHAR(F) Len: 9
+	Putting Back: CHAR(F) Len: 9
+	expr{
+		Returning: CHAR(F) Len: 9
+		Putting Back: CHAR(F) Len: 9
+		var{
+			Returning: CHAR(F) Len: 9
+			Putting Back: CHAR(F) Len: 9
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: CHAR(F) Len: 9
+			Putting Back: CHAR(F) Len: 9
+			factor{
+				number{
+					Returning: CHAR(F) Len: 9
+					Putting Back: CHAR(F) Len: 9
+					fraction{
+						Returning: CHAR(F) Len: 9
+						Returning: LPAR(() Len: 6
+						factor{
+							number{
+								Returning: NUMBER(F(1/1)) Len: 8
+							}
+						}
+						Returning: MULTOP(/) Len: 13
+						factor{
+							number{
+								Returning: NUMBER(F(56/1)) Len: 10
+							}
+						}
+						Returning: RPAR()) Len: 9
+					}
+				}
+			}
+			mulop{
+				Returning: EOL(EOL) Len: 16
+				Putting Back: EOL(EOL) Len: 16
+			}
+		}
+		addop{
+			Returning: EOL(EOL) Len: 16
+			Putting Back: EOL(EOL) Len: 16
+		}
+	}
+	Returning: EOL(EOL) Len: 16
+	Putting Back: EOL(EOL) Len: 16
+}
+Returning: EOL(EOL) Len: 16
+Symbol Table {}
 ---- ---- ---- Starting Line 9 ---- ---- ----
+line{
+	Returning: CHAR(F) Len: 1
+	Putting Back: CHAR(F) Len: 1
+	expr{
 		Returning: CHAR(F) Len: 1
 		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(4/1)) Len: 1
-		Returning: MULTOP(/) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Putting Back: FACTOR(F(5/1)) Len: 1
-		Returning: FACTOR(F(5/1)) Len: 1
-Destroying: FACTOR(F(5/1)) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+			factor{
+				number{
+					Returning: CHAR(F) Len: 1
+					Putting Back: CHAR(F) Len: 1
+					fraction{
+						Returning: CHAR(F) Len: 1
+						Returning: LPAR(() Len: 1
+						factor{
+							number{
+								Returning: NUMBER(F(3/1)) Len: 1
+							}
+						}
+						Returning: MULTOP(/) Len: 1
+						factor{
+							number{
+								Returning: RPAR()) Len: 1
+								Putting Back: RPAR()) Len: 1
+								fraction{
+									Returning: RPAR()) Len: 1
+									Putting Back: RPAR()) Len: 1
+								}
+								var{
+									Returning: RPAR()) Len: 1
+									Putting Back: RPAR()) Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+							}
+							Returning: RPAR()) Len: 1
+							Putting Back: RPAR()) Len: 1
+Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 10 ---- ---- ----
+line{
+	Returning: CHAR(F) Len: 1
+	Putting Back: CHAR(F) Len: 1
+	expr{
 		Returning: CHAR(F) Len: 1
 		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Putting Back: CHAR(F) Len: 1
-		Returning: CHAR(F) Len: 1
-		Returning: NUMBER(F(4/1)) Len: 2
-		Putting Back: NUMBER(F(4/1)) Len: 2
-		Returning: NUMBER(F(4/1)) Len: 2
-Destroying: NUMBER(F(4/1)) Len: 2
-		Returning: MULTOP(/) Len: 1
-Destroying: MULTOP(/) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-Destroying: NUMBER(F(5/1)) Len: 1
-		Returning: RPAR()) Len: 1
-Destroying: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+			factor{
+				number{
+					Returning: CHAR(F) Len: 1
+					Putting Back: CHAR(F) Len: 1
+					fraction{
+						Returning: CHAR(F) Len: 1
+						Returning: LPAR(() Len: 1
+						factor{
+							number{
+								Returning: NUMBER(F(4/1)) Len: 1
+							}
+						}
+						Returning: MULTOP(/) Len: 1
+						factor{
+							number{
+								Returning: NUMBER(F(5/1)) Len: 1
+							}
+						}
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+						Putting Back: FACTOR(F(5/1)) Len: 1
+Returning: FACTOR(F(5/1)) Len: 1
+Destroying: FACTOR(F(5/1)) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 11 ---- ---- ----
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Putting Back: NUMBER(F(8/1)) Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Putting Back: NUMBER(F(8/1)) Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Returning: ADDOP(+) Len: 2
-		Putting Back: ADDOP(+) Len: 2
-		Returning: ADDOP(+) Len: 2
-		Returning: NUMBER(F(7/1)) Len: 2
-		Putting Back: NUMBER(F(7/1)) Len: 2
-		Returning: NUMBER(F(7/1)) Len: 2
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Returning: MULTOP(*) Len: 2
-		Returning: CHAR(F) Len: 2
-		Putting Back: CHAR(F) Len: 2
-		Returning: CHAR(F) Len: 2
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(4/1)) Len: 1
-		Returning: CHAR(.) Len: 1
-		Putting Back: CHAR(.) Len: 1
-		Putting Back: FACTOR(F(4/1)) Len: 1
-		Returning: FACTOR(F(4/1)) Len: 1
-Destroying: FACTOR(F(4/1)) Len: 1
-		Returning: CHAR(.) Len: 1
-Destroying: CHAR(.) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
+line{
+	Returning: CHAR(F) Len: 1
+	Putting Back: CHAR(F) Len: 1
+	expr{
+		Returning: CHAR(F) Len: 1
+		Putting Back: CHAR(F) Len: 1
+		var{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: CHAR(F) Len: 1
+			Putting Back: CHAR(F) Len: 1
+			factor{
+				number{
+					Returning: CHAR(F) Len: 1
+					Putting Back: CHAR(F) Len: 1
+					fraction{
+						Returning: CHAR(F) Len: 1
+						Returning: NUMBER(F(4/1)) Len: 2
+						Putting Back: NUMBER(F(4/1)) Len: 2
+Returning: NUMBER(F(4/1)) Len: 2
+Destroying: NUMBER(F(4/1)) Len: 2
+Returning: MULTOP(/) Len: 1
+Destroying: MULTOP(/) Len: 1
+Returning: NUMBER(F(5/1)) Len: 1
 Destroying: NUMBER(F(5/1)) Len: 1
-		Returning: RPAR()) Len: 1
+Returning: RPAR()) Len: 1
 Destroying: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-Destroying: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 12 ---- ---- ----
+line{
+	Returning: LPAR(() Len: 1
+	Putting Back: LPAR(() Len: 1
+	expr{
 		Returning: LPAR(() Len: 1
 		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(4/1)) Len: 1
-		Putting Back: NUMBER(F(4/1)) Len: 1
-		Returning: NUMBER(F(4/1)) Len: 1
-		Putting Back: NUMBER(F(4/1)) Len: 1
-		Returning: NUMBER(F(4/1)) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Putting Back: ADDOP(+) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Putting Back: NUMBER(F(5/1)) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+		var{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+			factor{
+				number{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					fraction{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: LPAR(() Len: 1
+				expr{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+					term{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+						factor{
+							number{
+								Returning: LPAR(() Len: 1
+								Putting Back: LPAR(() Len: 1
+								fraction{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								var{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+							}
+							Returning: LPAR(() Len: 1
+							expr{
+								Returning: NUMBER(F(8/1)) Len: 1
+								Putting Back: NUMBER(F(8/1)) Len: 1
+								var{
+									Returning: NUMBER(F(8/1)) Len: 1
+									Putting Back: NUMBER(F(8/1)) Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+								term{
+									Returning: NUMBER(F(8/1)) Len: 1
+									Putting Back: NUMBER(F(8/1)) Len: 1
+									factor{
+										number{
+											Returning: NUMBER(F(8/1)) Len: 1
+										}
+									}
+									mulop{
+										Returning: ADDOP(+) Len: 2
+										Putting Back: ADDOP(+) Len: 2
+									}
+								}
+								addop{
+									Returning: ADDOP(+) Len: 2
+								}
+								term{
+									Returning: NUMBER(F(7/1)) Len: 2
+									Putting Back: NUMBER(F(7/1)) Len: 2
+									factor{
+										number{
+											Returning: NUMBER(F(7/1)) Len: 2
+										}
+									}
+									mulop{
+										Returning: RPAR()) Len: 1
+										Putting Back: RPAR()) Len: 1
+									}
+								}
+								addop{
+									Returning: RPAR()) Len: 1
+									Putting Back: RPAR()) Len: 1
+								}
+							}
+							Returning: RPAR()) Len: 1
+						}
+						mulop{
+							Returning: MULTOP(*) Len: 2
+						}
+						factor{
+							number{
+								Returning: CHAR(F) Len: 2
+								Putting Back: CHAR(F) Len: 2
+								fraction{
+									Returning: CHAR(F) Len: 2
+									Returning: LPAR(() Len: 1
+									factor{
+										number{
+											Returning: NUMBER(F(4/1)) Len: 1
+										}
+									}
+									Returning: CHAR(.) Len: 1
+									Putting Back: CHAR(.) Len: 1
+									Putting Back: FACTOR(F(4/1)) Len: 1
+Returning: FACTOR(F(4/1)) Len: 1
+Destroying: FACTOR(F(4/1)) Len: 1
+Returning: CHAR(.) Len: 1
+Destroying: CHAR(.) Len: 1
+Returning: NUMBER(F(5/1)) Len: 1
+Destroying: NUMBER(F(5/1)) Len: 1
+Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 13 ---- ---- ----
-		Returning: NUMBER(F(6/1)) Len: 1
-		Putting Back: NUMBER(F(6/1)) Len: 1
-		Returning: NUMBER(F(6/1)) Len: 1
-		Putting Back: NUMBER(F(6/1)) Len: 1
-		Returning: NUMBER(F(6/1)) Len: 1
-		Putting Back: NUMBER(F(6/1)) Len: 1
-		Returning: NUMBER(F(6/1)) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Putting Back: ADDOP(+) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Putting Back: NUMBER(F(8/1)) Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-Destroying: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-Destroying: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
+line{
+	Returning: LPAR(() Len: 1
+	Putting Back: LPAR(() Len: 1
+	expr{
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		var{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+			factor{
+				number{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					fraction{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: LPAR(() Len: 1
+				expr{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+					term{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+						factor{
+							number{
+								Returning: LPAR(() Len: 1
+								Putting Back: LPAR(() Len: 1
+								fraction{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								var{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+							}
+							Returning: LPAR(() Len: 1
+							expr{
+								Returning: LPAR(() Len: 1
+								Putting Back: LPAR(() Len: 1
+								var{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+								term{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+									factor{
+										number{
+											Returning: LPAR(() Len: 1
+											Putting Back: LPAR(() Len: 1
+											fraction{
+												Returning: LPAR(() Len: 1
+												Putting Back: LPAR(() Len: 1
+											}
+											var{
+												Returning: LPAR(() Len: 1
+												Putting Back: LPAR(() Len: 1
+											}
+											Putting Back: INVALID(INVALID) Len: 1
+										}
+										Returning: LPAR(() Len: 1
+										expr{
+											Returning: NUMBER(F(4/1)) Len: 1
+											Putting Back: NUMBER(F(4/1)) Len: 1
+											var{
+												Returning: NUMBER(F(4/1)) Len: 1
+												Putting Back: NUMBER(F(4/1)) Len: 1
+											}
+											Putting Back: INVALID(INVALID) Len: 1
+											term{
+												Returning: NUMBER(F(4/1)) Len: 1
+												Putting Back: NUMBER(F(4/1)) Len: 1
+												factor{
+													number{
+														Returning: NUMBER(F(4/1)) Len: 1
+													}
+												}
+												mulop{
+													Returning: ADDOP(+) Len: 1
+													Putting Back: ADDOP(+) Len: 1
+												}
+											}
+											addop{
+												Returning: ADDOP(+) Len: 1
+											}
+											term{
+												Returning: NUMBER(F(5/1)) Len: 1
+												Putting Back: NUMBER(F(5/1)) Len: 1
+												factor{
+													number{
+														Returning: NUMBER(F(5/1)) Len: 1
+													}
+												}
+												mulop{
+													Returning: RPAR()) Len: 1
+													Putting Back: RPAR()) Len: 1
+												}
+											}
+											addop{
+												Returning: RPAR()) Len: 1
+												Putting Back: RPAR()) Len: 1
+											}
+										}
+										Returning: RPAR()) Len: 1
+									}
+									mulop{
+										Returning: RPAR()) Len: 1
+										Putting Back: RPAR()) Len: 1
+									}
+								}
+								addop{
+									Returning: RPAR()) Len: 1
+									Putting Back: RPAR()) Len: 1
+								}
+							}
+							Returning: RPAR()) Len: 1
+						}
+						mulop{
+							Returning: EOL(EOL) Len: 1
+							Putting Back: EOL(EOL) Len: 1
+						}
+					}
+					addop{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+				}
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 14 ---- ---- ----
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(7/1)) Len: 1
-		Putting Back: NUMBER(F(7/1)) Len: 1
-		Returning: NUMBER(F(7/1)) Len: 1
-		Putting Back: NUMBER(F(7/1)) Len: 1
-		Returning: NUMBER(F(7/1)) Len: 1
-		Returning: MULTOP(*) Len: 1
+line{
+	Returning: NUMBER(F(6/1)) Len: 1
+	Putting Back: NUMBER(F(6/1)) Len: 1
+	expr{
 		Returning: NUMBER(F(6/1)) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Putting Back: RPAR()) Len: 1
-		Returning: RPAR()) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
----- ---- ---- Starting Line 15 ---- ---- ----
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Putting Back: NUMBER(F(8/1)) Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Putting Back: NUMBER(F(8/1)) Len: 1
-		Returning: NUMBER(F(8/1)) Len: 1
-		Returning: MULTOP(*) Len: 2
-		Returning: NUMBER(F(9/1)) Len: 2
-		Returning: CHAR(e) Len: 1
-		Putting Back: CHAR(e) Len: 1
-		Returning: CHAR(e) Len: 1
-		Putting Back: CHAR(e) Len: 1
-		Returning: CHAR(e) Len: 1
-		Putting Back: CHAR(e) Len: 1
-		Returning: CHAR(e) Len: 1
-Destroying: CHAR(e) Len: 1
-		Returning: RPAR()) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		var{
+			Returning: NUMBER(F(6/1)) Len: 1
+			Putting Back: NUMBER(F(6/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(6/1)) Len: 1
+			Putting Back: NUMBER(F(6/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(6/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 1
+				Putting Back: ADDOP(+) Len: 1
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 1
+		}
+		term{
+			Returning: NUMBER(F(8/1)) Len: 1
+			Putting Back: NUMBER(F(8/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(8/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: RPAR()) Len: 1
+				Putting Back: RPAR()) Len: 1
+			}
+		}
+		addop{
+			Returning: RPAR()) Len: 1
+			Putting Back: RPAR()) Len: 1
+		}
+	}
+	Returning: RPAR()) Len: 1
+	Putting Back: RPAR()) Len: 1
+Returning: RPAR()) Len: 1
 Destroying: RPAR()) Len: 1
-		Returning: ADDOP(+) Len: 2
-Destroying: ADDOP(+) Len: 2
-		Returning: NUMBER(F(98/1)) Len: 3
-Destroying: NUMBER(F(98/1)) Len: 3
-		Returning: EOL(EOL) Len: 1
+Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
+---- ---- ---- Starting Line 15 ---- ---- ----
+line{
+	Returning: LPAR(() Len: 1
+	Putting Back: LPAR(() Len: 1
+	expr{
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		var{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+			factor{
+				number{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					fraction{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: LPAR(() Len: 1
+				expr{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+					term{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+						factor{
+							number{
+								Returning: LPAR(() Len: 1
+								Putting Back: LPAR(() Len: 1
+								fraction{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								var{
+									Returning: LPAR(() Len: 1
+									Putting Back: LPAR(() Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+							}
+							Returning: LPAR(() Len: 1
+							expr{
+								Returning: NUMBER(F(7/1)) Len: 1
+								Putting Back: NUMBER(F(7/1)) Len: 1
+								var{
+									Returning: NUMBER(F(7/1)) Len: 1
+									Putting Back: NUMBER(F(7/1)) Len: 1
+								}
+								Putting Back: INVALID(INVALID) Len: 1
+								term{
+									Returning: NUMBER(F(7/1)) Len: 1
+									Putting Back: NUMBER(F(7/1)) Len: 1
+									factor{
+										number{
+											Returning: NUMBER(F(7/1)) Len: 1
+										}
+									}
+									mulop{
+										Returning: MULTOP(*) Len: 1
+									}
+									factor{
+										number{
+											Returning: NUMBER(F(6/1)) Len: 1
+										}
+									}
+									mulop{
+										Returning: RPAR()) Len: 1
+										Putting Back: RPAR()) Len: 1
+									}
+								}
+								addop{
+									Returning: RPAR()) Len: 1
+									Putting Back: RPAR()) Len: 1
+								}
+							}
+							Returning: RPAR()) Len: 1
+						}
+						mulop{
+							Returning: EOL(EOL) Len: 1
+							Putting Back: EOL(EOL) Len: 1
+						}
+					}
+					addop{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+				}
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 16 ---- ---- ----
-		Returning: NUMBER(F(5/1)) Len: 1
-		Putting Back: NUMBER(F(5/1)) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Putting Back: NUMBER(F(5/1)) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Putting Back: NUMBER(F(5/1)) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Putting Back: ADDOP(+) Len: 1
-		Returning: ADDOP(+) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+line{
+	Returning: LPAR(() Len: 1
+	Putting Back: LPAR(() Len: 1
+	expr{
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		var{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+			factor{
+				number{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					fraction{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: LPAR(() Len: 1
+				expr{
+					Returning: NUMBER(F(8/1)) Len: 1
+					Putting Back: NUMBER(F(8/1)) Len: 1
+					var{
+						Returning: NUMBER(F(8/1)) Len: 1
+						Putting Back: NUMBER(F(8/1)) Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+					term{
+						Returning: NUMBER(F(8/1)) Len: 1
+						Putting Back: NUMBER(F(8/1)) Len: 1
+						factor{
+							number{
+								Returning: NUMBER(F(8/1)) Len: 1
+							}
+						}
+						mulop{
+							Returning: MULTOP(*) Len: 2
+						}
+						factor{
+							number{
+								Returning: NUMBER(F(9/1)) Len: 2
+							}
+						}
+						mulop{
+							Returning: CHAR(e) Len: 1
+							Putting Back: CHAR(e) Len: 1
+						}
+					}
+					addop{
+						Returning: CHAR(e) Len: 1
+						Putting Back: CHAR(e) Len: 1
+					}
+				}
+				Returning: CHAR(e) Len: 1
+				Putting Back: CHAR(e) Len: 1
+Returning: CHAR(e) Len: 1
+Destroying: CHAR(e) Len: 1
+Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+Returning: ADDOP(+) Len: 2
+Destroying: ADDOP(+) Len: 2
+Returning: NUMBER(F(98/1)) Len: 3
+Destroying: NUMBER(F(98/1)) Len: 3
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 17 ---- ---- ----
-		Returning: NUMBER(F(6/1)) Len: 1
-		Putting Back: NUMBER(F(6/1)) Len: 1
-		Returning: NUMBER(F(6/1)) Len: 1
-		Putting Back: NUMBER(F(6/1)) Len: 1
-		Returning: NUMBER(F(6/1)) Len: 1
-		Putting Back: NUMBER(F(6/1)) Len: 1
-		Returning: NUMBER(F(6/1)) Len: 1
-		Returning: MULTOP(*) Len: 2
-		Returning: NUMBER(F(7/1)) Len: 2
-		Returning: ADDOP(+) Len: 2
-		Putting Back: ADDOP(+) Len: 2
-		Returning: ADDOP(+) Len: 2
-		Returning: NUMBER(F(5/1)) Len: 2
-		Putting Back: NUMBER(F(5/1)) Len: 2
-		Returning: NUMBER(F(5/1)) Len: 2
-		Returning: ADDOP(-) Len: 2
-		Putting Back: ADDOP(-) Len: 2
-		Returning: ADDOP(-) Len: 2
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+line{
+	Returning: NUMBER(F(5/1)) Len: 1
+	Putting Back: NUMBER(F(5/1)) Len: 1
+	expr{
+		Returning: NUMBER(F(5/1)) Len: 1
+		Putting Back: NUMBER(F(5/1)) Len: 1
+		var{
+			Returning: NUMBER(F(5/1)) Len: 1
+			Putting Back: NUMBER(F(5/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(5/1)) Len: 1
+			Putting Back: NUMBER(F(5/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(5/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 1
+				Putting Back: ADDOP(+) Len: 1
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 1
+		}
+		term{
+			Returning: EOL(EOL) Len: 1
+			Putting Back: EOL(EOL) Len: 1
+			factor{
+				number{
+					Returning: EOL(EOL) Len: 1
+					Putting Back: EOL(EOL) Len: 1
+					fraction{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					var{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 18 ---- ---- ----
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Putting Back: LPAR(() Len: 1
-		Returning: LPAR(() Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Putting Back: NUMBER(F(5/1)) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Putting Back: NUMBER(F(5/1)) Len: 1
-		Returning: NUMBER(F(5/1)) Len: 1
-		Returning: MULTOP(*) Len: 2
-		Returning: NUMBER(F(9/1)) Len: 2
-		Returning: RPAR()) Len: 2
-		Putting Back: RPAR()) Len: 2
-		Returning: RPAR()) Len: 2
-		Putting Back: RPAR()) Len: 2
-		Returning: RPAR()) Len: 2
-		Returning: ADDOP(+) Len: 2
-		Putting Back: ADDOP(+) Len: 2
-		Returning: ADDOP(+) Len: 2
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
-		Putting Back: EOL(EOL) Len: 1
-		Returning: EOL(EOL) Len: 1
+line{
+	Returning: NUMBER(F(6/1)) Len: 1
+	Putting Back: NUMBER(F(6/1)) Len: 1
+	expr{
+		Returning: NUMBER(F(6/1)) Len: 1
+		Putting Back: NUMBER(F(6/1)) Len: 1
+		var{
+			Returning: NUMBER(F(6/1)) Len: 1
+			Putting Back: NUMBER(F(6/1)) Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: NUMBER(F(6/1)) Len: 1
+			Putting Back: NUMBER(F(6/1)) Len: 1
+			factor{
+				number{
+					Returning: NUMBER(F(6/1)) Len: 1
+				}
+			}
+			mulop{
+				Returning: MULTOP(*) Len: 2
+			}
+			factor{
+				number{
+					Returning: NUMBER(F(7/1)) Len: 2
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 2
+				Putting Back: ADDOP(+) Len: 2
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 2
+		}
+		term{
+			Returning: NUMBER(F(5/1)) Len: 2
+			Putting Back: NUMBER(F(5/1)) Len: 2
+			factor{
+				number{
+					Returning: NUMBER(F(5/1)) Len: 2
+				}
+			}
+			mulop{
+				Returning: ADDOP(-) Len: 2
+				Putting Back: ADDOP(-) Len: 2
+			}
+		}
+		addop{
+			Returning: ADDOP(-) Len: 2
+		}
+		term{
+			Returning: EOL(EOL) Len: 1
+			Putting Back: EOL(EOL) Len: 1
+			factor{
+				number{
+					Returning: EOL(EOL) Len: 1
+					Putting Back: EOL(EOL) Len: 1
+					fraction{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					var{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
 ---- ---- ---- Starting Line 19 ---- ---- ----
-		Returning: END(END) Len: 1
+line{
+	Returning: LPAR(() Len: 1
+	Putting Back: LPAR(() Len: 1
+	expr{
+		Returning: LPAR(() Len: 1
+		Putting Back: LPAR(() Len: 1
+		var{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+		}
+		Putting Back: INVALID(INVALID) Len: 1
+		term{
+			Returning: LPAR(() Len: 1
+			Putting Back: LPAR(() Len: 1
+			factor{
+				number{
+					Returning: LPAR(() Len: 1
+					Putting Back: LPAR(() Len: 1
+					fraction{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					var{
+						Returning: LPAR(() Len: 1
+						Putting Back: LPAR(() Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: LPAR(() Len: 1
+				expr{
+					Returning: NUMBER(F(5/1)) Len: 1
+					Putting Back: NUMBER(F(5/1)) Len: 1
+					var{
+						Returning: NUMBER(F(5/1)) Len: 1
+						Putting Back: NUMBER(F(5/1)) Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+					term{
+						Returning: NUMBER(F(5/1)) Len: 1
+						Putting Back: NUMBER(F(5/1)) Len: 1
+						factor{
+							number{
+								Returning: NUMBER(F(5/1)) Len: 1
+							}
+						}
+						mulop{
+							Returning: MULTOP(*) Len: 2
+						}
+						factor{
+							number{
+								Returning: NUMBER(F(9/1)) Len: 2
+							}
+						}
+						mulop{
+							Returning: RPAR()) Len: 2
+							Putting Back: RPAR()) Len: 2
+						}
+					}
+					addop{
+						Returning: RPAR()) Len: 2
+						Putting Back: RPAR()) Len: 2
+					}
+				}
+				Returning: RPAR()) Len: 2
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 2
+				Putting Back: ADDOP(+) Len: 2
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 2
+		}
+		term{
+			Returning: EOL(EOL) Len: 1
+			Putting Back: EOL(EOL) Len: 1
+			factor{
+				number{
+					Returning: EOL(EOL) Len: 1
+					Putting Back: EOL(EOL) Len: 1
+					fraction{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					var{
+						Returning: EOL(EOL) Len: 1
+						Putting Back: EOL(EOL) Len: 1
+					}
+					Putting Back: INVALID(INVALID) Len: 1
+				}
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {}
+---- ---- ---- Starting Line 20 ---- ---- ----
+line{
+	Returning: CHAR(x) Len: 1
+	Putting Back: CHAR(x) Len: 1
+	expr{
+		Returning: CHAR(x) Len: 1
+		Putting Back: CHAR(x) Len: 1
+		var{
+			Returning: CHAR(x) Len: 1
+			Returning: ASSIGN(=) Len: 1
+			Putting Back: ASSIGN(=) Len: 1
+			Defining variable x at pos 0
+		}
+		Returning: ASSIGN(=) Len: 1
+		expr{
+			Returning: NUMBER(F(8/1)) Len: 1
+			Putting Back: NUMBER(F(8/1)) Len: 1
+			var{
+				Returning: NUMBER(F(8/1)) Len: 1
+				Putting Back: NUMBER(F(8/1)) Len: 1
+			}
+			Putting Back: INVALID(INVALID) Len: 1
+			term{
+				Returning: NUMBER(F(8/1)) Len: 1
+				Putting Back: NUMBER(F(8/1)) Len: 1
+				factor{
+					number{
+						Returning: NUMBER(F(8/1)) Len: 1
+					}
+				}
+				mulop{
+					Returning: EOL(EOL) Len: 1
+					Putting Back: EOL(EOL) Len: 1
+				}
+			}
+			addop{
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+			}
+		}
+		Setting value of x to F(8/1)
+	}
+	Returning: EOL(EOL) Len: 1
+	Putting Back: EOL(EOL) Len: 1
+}
+Returning: EOL(EOL) Len: 1
+Symbol Table {  (x, F(8/1))}
+---- ---- ---- Starting Line 21 ---- ---- ----
+line{
+	Returning: CHAR(y) Len: 1
+	Putting Back: CHAR(y) Len: 1
+	expr{
+		Returning: CHAR(y) Len: 1
+		Putting Back: CHAR(y) Len: 1
+		var{
+			Returning: CHAR(y) Len: 1
+			Returning: ASSIGN(=) Len: 18
+			Putting Back: ASSIGN(=) Len: 18
+			Defining variable y at pos 1
+		}
+		Returning: ASSIGN(=) Len: 18
+		expr{
+			Returning: NUMBER(F(9/1)) Len: 18
+			Putting Back: NUMBER(F(9/1)) Len: 18
+			var{
+				Returning: NUMBER(F(9/1)) Len: 18
+				Putting Back: NUMBER(F(9/1)) Len: 18
+			}
+			Putting Back: INVALID(INVALID) Len: 1
+			term{
+				Returning: NUMBER(F(9/1)) Len: 18
+				Putting Back: NUMBER(F(9/1)) Len: 18
+				factor{
+					number{
+						Returning: NUMBER(F(9/1)) Len: 18
+					}
+				}
+				mulop{
+					Returning: EOL(EOL) Len: 1
+					Putting Back: EOL(EOL) Len: 1
+				}
+			}
+			addop{
+				Returning: EOL(EOL) Len: 1
+				Putting Back: EOL(EOL) Len: 1
+			}
+		}
+		Setting value of y to F(9/1)
+	}
+	Returning: EOL(EOL) Len: 1
+	Putting Back: EOL(EOL) Len: 1
+}
+Returning: EOL(EOL) Len: 1
+Symbol Table {  (x, F(8/1))  (y, F(9/1))}
+---- ---- ---- Starting Line 22 ---- ---- ----
+line{
+	Returning: CHAR(x) Len: 1
+	Putting Back: CHAR(x) Len: 1
+	expr{
+		Returning: CHAR(x) Len: 1
+		Putting Back: CHAR(x) Len: 1
+		var{
+			Returning: CHAR(x) Len: 1
+			Returning: ADDOP(+) Len: 2
+			Putting Back: ADDOP(+) Len: 2
+			Variable x at pos 0 already exists
+		}
+		Putting Back: RVAR(F(8/1)) Len: 1
+		term{
+			Returning: RVAR(F(8/1)) Len: 1
+			Putting Back: RVAR(F(8/1)) Len: 1
+			factor{
+				number{
+					Returning: RVAR(F(8/1)) Len: 1
+					Putting Back: RVAR(F(8/1)) Len: 1
+					fraction{
+						Returning: RVAR(F(8/1)) Len: 1
+						Putting Back: RVAR(F(8/1)) Len: 1
+					}
+					var{
+						Returning: RVAR(F(8/1)) Len: 1
+					}
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 2
+				Putting Back: ADDOP(+) Len: 2
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 2
+		}
+		term{
+			Returning: CHAR(y) Len: 2
+			Putting Back: CHAR(y) Len: 2
+			factor{
+				number{
+					Returning: CHAR(y) Len: 2
+					Putting Back: CHAR(y) Len: 2
+					fraction{
+						Returning: CHAR(y) Len: 2
+						Putting Back: CHAR(y) Len: 2
+					}
+					var{
+						Returning: CHAR(y) Len: 2
+						Returning: EOL(EOL) Len: 6
+						Putting Back: EOL(EOL) Len: 6
+						Variable y at pos 1 already exists
+					}
+				}
+			}
+			mulop{
+				Returning: EOL(EOL) Len: 6
+				Putting Back: EOL(EOL) Len: 6
+			}
+		}
+		addop{
+			Returning: EOL(EOL) Len: 6
+			Putting Back: EOL(EOL) Len: 6
+		}
+	}
+	Returning: EOL(EOL) Len: 6
+	Putting Back: EOL(EOL) Len: 6
+}
+Returning: EOL(EOL) Len: 6
+Symbol Table {  (x, F(8/1))  (y, F(9/1))}
+---- ---- ---- Starting Line 23 ---- ---- ----
+line{
+	Returning: CHAR(z) Len: 1
+	Putting Back: CHAR(z) Len: 1
+	expr{
+		Returning: CHAR(z) Len: 1
+		Putting Back: CHAR(z) Len: 1
+		var{
+			Returning: CHAR(z) Len: 1
+			Returning: ASSIGN(=) Len: 2
+			Putting Back: ASSIGN(=) Len: 2
+			Defining variable z at pos 2
+		}
+		Returning: ASSIGN(=) Len: 2
+		expr{
+			Returning: CHAR(x) Len: 2
+			Putting Back: CHAR(x) Len: 2
+			var{
+				Returning: CHAR(x) Len: 2
+				Returning: EOL(EOL) Len: 6
+				Putting Back: EOL(EOL) Len: 6
+				Variable x at pos 0 already exists
+			}
+			Putting Back: RVAR(F(8/1)) Len: 2
+			term{
+				Returning: RVAR(F(8/1)) Len: 2
+				Putting Back: RVAR(F(8/1)) Len: 2
+				factor{
+					number{
+						Returning: RVAR(F(8/1)) Len: 2
+						Putting Back: RVAR(F(8/1)) Len: 2
+						fraction{
+							Returning: RVAR(F(8/1)) Len: 2
+							Putting Back: RVAR(F(8/1)) Len: 2
+						}
+						var{
+							Returning: RVAR(F(8/1)) Len: 2
+						}
+					}
+				}
+				mulop{
+					Returning: EOL(EOL) Len: 6
+					Putting Back: EOL(EOL) Len: 6
+				}
+			}
+			addop{
+				Returning: EOL(EOL) Len: 6
+				Putting Back: EOL(EOL) Len: 6
+			}
+		}
+		Setting value of z to F(8/1)
+	}
+	Returning: EOL(EOL) Len: 6
+	Putting Back: EOL(EOL) Len: 6
+}
+Returning: EOL(EOL) Len: 6
+Symbol Table {  (x, F(8/1))  (y, F(9/1))  (z, F(8/1))}
+---- ---- ---- Starting Line 24 ---- ---- ----
+line{
+	Returning: CHAR(a) Len: 1
+	Putting Back: CHAR(a) Len: 1
+	expr{
+		Returning: CHAR(a) Len: 1
+		Putting Back: CHAR(a) Len: 1
+		var{
+			Returning: CHAR(a) Len: 1
+			Returning: ADDOP(+) Len: 2
+			Putting Back: ADDOP(+) Len: 2
+			Defining variable a at pos 3
+			Putting Back: LVAR(F(3/1)) Len: 1
+Returning: LVAR(F(3/1)) Len: 1
+Destroying: LVAR(F(3/1)) Len: 1
+Returning: ADDOP(+) Len: 2
+Destroying: ADDOP(+) Len: 2
+Returning: CHAR(x) Len: 2
+Destroying: CHAR(x) Len: 2
+Returning: EOL(EOL) Len: 6
+Symbol Table {  (x, F(8/1))  (y, F(9/1))  (z, F(8/1))  (a, F(0/1))}
+---- ---- ---- Starting Line 25 ---- ---- ----
+line{
+	Returning: CHAR(x) Len: 1
+	Putting Back: CHAR(x) Len: 1
+	expr{
+		Returning: CHAR(x) Len: 1
+		Putting Back: CHAR(x) Len: 1
+		var{
+			Returning: CHAR(x) Len: 1
+			Returning: ADDOP(+) Len: 2
+			Putting Back: ADDOP(+) Len: 2
+			Variable x at pos 0 already exists
+		}
+		Putting Back: RVAR(F(8/1)) Len: 1
+		term{
+			Returning: RVAR(F(8/1)) Len: 1
+			Putting Back: RVAR(F(8/1)) Len: 1
+			factor{
+				number{
+					Returning: RVAR(F(8/1)) Len: 1
+					Putting Back: RVAR(F(8/1)) Len: 1
+					fraction{
+						Returning: RVAR(F(8/1)) Len: 1
+						Putting Back: RVAR(F(8/1)) Len: 1
+					}
+					var{
+						Returning: RVAR(F(8/1)) Len: 1
+					}
+				}
+			}
+			mulop{
+				Returning: ADDOP(+) Len: 2
+				Putting Back: ADDOP(+) Len: 2
+			}
+		}
+		addop{
+			Returning: ADDOP(+) Len: 2
+		}
+		term{
+			Returning: CHAR(a) Len: 2
+			Putting Back: CHAR(a) Len: 2
+			factor{
+				number{
+					Returning: CHAR(a) Len: 2
+					Putting Back: CHAR(a) Len: 2
+					fraction{
+						Returning: CHAR(a) Len: 2
+						Putting Back: CHAR(a) Len: 2
+					}
+					var{
+						Returning: CHAR(a) Len: 2
+						Returning: EOL(EOL) Len: 6
+						Putting Back: EOL(EOL) Len: 6
+						Variable a at pos 3 already exists
+					}
+				}
+			}
+			mulop{
+				Returning: EOL(EOL) Len: 6
+				Putting Back: EOL(EOL) Len: 6
+			}
+		}
+		addop{
+			Returning: EOL(EOL) Len: 6
+			Putting Back: EOL(EOL) Len: 6
+		}
+	}
+	Returning: EOL(EOL) Len: 6
+	Putting Back: EOL(EOL) Len: 6
+}
+Returning: EOL(EOL) Len: 6
+Symbol Table {  (x, F(8/1))  (y, F(9/1))  (z, F(8/1))  (a, F(0/1))}
+---- ---- ---- Starting Line 26 ---- ---- ----
+line{
+	Returning: CHAR(x) Len: 1
+	Putting Back: CHAR(x) Len: 1
+	expr{
+		Returning: CHAR(x) Len: 1
+		Putting Back: CHAR(x) Len: 1
+		var{
+			Returning: CHAR(x) Len: 1
+			Returning: ASSIGN(=) Len: 2
+			Putting Back: ASSIGN(=) Len: 2
+			Variable x at pos 0 already exists
+			Putting Back: RVAR(F(8/1)) Len: 1
+Returning: RVAR(F(8/1)) Len: 1
+Destroying: RVAR(F(8/1)) Len: 1
+Returning: ASSIGN(=) Len: 2
+Destroying: ASSIGN(=) Len: 2
+Returning: NUMBER(F(9/1)) Len: 2
+Destroying: NUMBER(F(9/1)) Len: 2
+Returning: EOL(EOL) Len: 6
+Symbol Table {  (x, F(8/1))  (y, F(9/1))  (z, F(8/1))  (a, F(0/1))}
+---- ---- ---- Starting Line 27 ---- ---- ----
+line{
+	Returning: CHAR(a) Len: 1
+	Putting Back: CHAR(a) Len: 1
+	expr{
+		Returning: CHAR(a) Len: 1
+		Putting Back: CHAR(a) Len: 1
+		var{
+			Returning: CHAR(a) Len: 1
+			Returning: ASSIGN(=) Len: 2
+			Putting Back: ASSIGN(=) Len: 2
+			Variable a at pos 3 already exists
+			Putting Back: RVAR(F(0/1)) Len: 1
+Returning: RVAR(F(0/1)) Len: 1
+Destroying: RVAR(F(0/1)) Len: 1
+Returning: ASSIGN(=) Len: 2
+Destroying: ASSIGN(=) Len: 2
+Returning: CHAR(F) Len: 2
+Destroying: CHAR(F) Len: 2
+Returning: LPAR(() Len: 1
+Destroying: LPAR(() Len: 1
+Returning: CHAR(x) Len: 1
+Destroying: CHAR(x) Len: 1
+Returning: MULTOP(/) Len: 1
+Destroying: MULTOP(/) Len: 1
+Returning: NUMBER(F(7/1)) Len: 1
+Destroying: NUMBER(F(7/1)) Len: 1
+Returning: RPAR()) Len: 1
+Destroying: RPAR()) Len: 1
+Returning: MULTOP(*) Len: 1
+Destroying: MULTOP(*) Len: 1
+Returning: CHAR(y) Len: 1
+Destroying: CHAR(y) Len: 1
+Returning: EOL(EOL) Len: 1
+Symbol Table {  (x, F(8/1))  (y, F(9/1))  (z, F(8/1))  (a, F(0/1))}
+---- ---- ---- Starting Line 28 ---- ---- ----
+line{
+	Returning: END(END) Len: 1
+	Symbol Table {  (x, F(8/1))  (y, F(9/1))  (z, F(8/1))  (a, F(0/1))}

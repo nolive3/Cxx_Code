@@ -35,6 +35,7 @@
 		<Unit filename="calc_exception.h" />
 		<Unit filename="calculator.cpp" />
 		<Unit filename="calculator.h" />
+		<Unit filename="debugvars.h" />
 		<Unit filename="fraction.cpp" />
 		<Unit filename="fraction.h" />
 		<Unit filename="main.cpp" />

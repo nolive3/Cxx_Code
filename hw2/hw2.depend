@@ -1,48 +1,57 @@
 # depslib dependency file v1.0
-1360627547 source:c:\users\nick\documents\github\cxx_code\hw2\fraction.cpp
+1360631147 source:c:\users\nick\documents\github\cxx_code\hw2\fraction.cpp
 	"fraction.h"
 
-1360627547 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
+1364263246 c:\users\nick\documents\github\cxx_code\hw2\fraction.h
 	<iostream>
+	"debugvars.h"
 
-1362047758 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
+1364263272 source:c:\users\nick\documents\github\cxx_code\hw2\main.cpp
 	"calculator.h"
 	"scanner.h"
 	<iostream>
 	<fstream>
 
-1362163033 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
+1364265049 source:c:\users\nick\documents\github\cxx_code\hw2\calculator.cpp
 	"calculator.h"
 	"calc_exception.h"
 	<sstream>
 
-1361323176 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
+1364264994 c:\users\nick\documents\github\cxx_code\hw2\calculator.h
 	"scanner.h"
 	<iostream>
+	<vector>
+	<string>
+	"debugvars.h"
 
-1361817648 c:\users\nick\documents\github\cxx_code\hw2\scanner.h
+1364263246 c:\users\nick\documents\github\cxx_code\hw2\scanner.h
 	<iostream>
 	<stack>
 	"token.h"
+	"debugvars.h"
 
-1362048473 c:\users\nick\documents\github\cxx_code\hw2\token.h
+1364263246 c:\users\nick\documents\github\cxx_code\hw2\token.h
 	<string>
 	"fraction.h"
 	<iostream>
+	"debugvars.h"
 
-1362049135 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
+1364263372 source:c:\users\nick\documents\github\cxx_code\hw2\scanner.cpp
 	"scanner.h"
 	"fraction.h"
 	<sstream>
 
-1362048466 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
+1364257403 source:c:\users\nick\documents\github\cxx_code\hw2\token.cpp
 	"token.h"
 
-1361816601 source:c:\users\nick\documents\github\cxx_code\hw2\calc_exception.cpp
+1361820201 source:c:\users\nick\documents\github\cxx_code\hw2\calc_exception.cpp
 	"calc_exception.h"
 
-1361816556 c:\users\nick\documents\github\cxx_code\hw2\calc_exception.h
+1364263246 c:\users\nick\documents\github\cxx_code\hw2\calc_exception.h
 	<stdexcept>
 	<string>
 	<iostream>
+	"debugvars.h"
+
+1364263211 c:\users\nick\documents\github\cxx_code\hw2\debugvars.h
 

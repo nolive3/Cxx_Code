@@ -3,6 +3,7 @@
 #include <iostream>
 #include <stack>
 #include "token.h"
+#include "debugvars.h"
 
 class Scanner
 {

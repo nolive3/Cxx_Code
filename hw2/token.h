@@ -3,12 +3,13 @@
 #include <string>
 #include "fraction.h"
 #include <iostream>
+#include "debugvars.h"
 
 class Token
 {
     public:
         union val_t {Fraction f; char s;};
-        enum token_t {END, EOL, ADDOP, MULTOP, CHAR, NUMBER, TERM, FACTOR, EXPR, LPAR, RPAR, INVALID};
+        enum token_t {ASSIGN, END, EOL, ADDOP, MULTOP, CHAR, NUMBER, TERM, FACTOR, EXPR, LPAR, RPAR, INVALID, RVAR, LVAR};
         friend std::ostream& operator<<(std::ostream& output, const Token& t);
         friend std::ostream& operator<<(std::ostream& output, const Token::token_t& t);
         Token(token_t new_type);
