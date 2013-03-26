@@ -47,6 +47,10 @@ class Fraction
         friend bool operator<(const int& lhs, const Fraction& rhs) {return Fraction(lhs)<rhs;}
         friend bool operator<(const Fraction& lhs, const int& rhs) {return lhs<Fraction(rhs);}
 
+        friend bool operator>(const Fraction& lhs, const Fraction& rhs) {return rhs<lhs;}
+        friend bool operator>(const int& lhs, const Fraction& rhs) {return Fraction(lhs)>rhs;}
+        friend bool operator>(const Fraction& lhs, const int& rhs) {return lhs>Fraction(rhs);}
+
         operator double() const {return (double)m_num/(double)m_den;}
 
         operator int() const {return m_num/m_den;}

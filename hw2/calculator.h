@@ -15,6 +15,14 @@ class Calculator
         struct symbol_t {std::string name = ""; Fraction val = 0; bool writen = false;};
         friend std::ostream& operator<<(std::ostream& output, const std::vector<symbol_t>& vec);
         friend std::ostream& operator<<(std::ostream& output, const symbol_t& vec);
+        friend bool operator<(const symbol_t& a, const symbol_t& b){return a.name < b.name;};
+        friend symbol_t operator+(const symbol_t& a, const symbol_t& b){
+                                Calculator::symbol_t res;
+                                res.writen = true;
+                                res.val = a.val+b.val;
+                                res.name = a.name + "+" + b.name;
+                                return res;
+                               };
         Calculator() = delete;
         Calculator(const Calculator&) = delete;
         Calculator operator=(const Calculator&) = delete;

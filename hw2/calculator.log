@@ -16,3 +16,4 @@ Error at Line 24, Column 1: Use of uninitialised variable a
 Error at Line 25, Column 4: Use of uninitialised variable a
 Error at Line 26, Column 1: Multiple definition of variable x
 Error at Line 28, Column 1: Additional input after expression
+Error at Line 31, Column 1: Use of uninitialised variable b

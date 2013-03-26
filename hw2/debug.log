@@ -1912,5 +1912,26 @@ Returning: EOL(EOL) Len: 1
 Symbol Table {(x, 8)(y, 9)(z, 8)(a, F(72/7))(k, 77)(j, 11)}
 ---- ---- ---- Starting Line 31 ---- ---- ----
 line{
+	Returning: CHAR(b) Len: 1
+	Putting Back: CHAR(b) Len: 1
+	expr{
+		Returning: CHAR(b) Len: 1
+		Putting Back: CHAR(b) Len: 1
+		var{
+			Returning: CHAR(b) Len: 1
+			Returning: ADDOP(+) Len: 2
+			Putting Back: ADDOP(+) Len: 2
+			Defining variable b at pos 6
+			Putting Back: LVAR(6) Len: 1
+Returning: LVAR(6) Len: 1
+Destroying: LVAR(6) Len: 1
+Returning: ADDOP(+) Len: 2
+Destroying: ADDOP(+) Len: 2
+Returning: CHAR(c) Len: 2
+Destroying: CHAR(c) Len: 2
+Returning: EOL(EOL) Len: 1
+Symbol Table {(x, 8)(y, 9)(z, 8)(a, F(72/7))(k, 77)(j, 11)(b, UNINITIALIZED)}
+---- ---- ---- Starting Line 32 ---- ---- ----
+line{
 	Returning: END(END) Len: 1
-	Symbol Table {(x, 8)(y, 9)(z, 8)(a, F(72/7))(k, 77)(j, 11)}
+	Symbol Table {(x, 8)(y, 9)(z, 8)(a, F(72/7))(k, 77)(j, 11)(b, UNINITIALIZED)}
